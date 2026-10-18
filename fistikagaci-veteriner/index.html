@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#204432">
+  <title>Üsküdar Fıstıkağacı Veteriner Kliniği | Üsküdar Veteriner Kliniği</title>
+  <meta name="description" content="Üsküdar Fıstıkağacı Veteriner Kliniği, Sultantepe Mahallesi Selvilik Caddesi No:97/A adresinde her gün 09:00–23:00 saatleri arasında açıktır. Telefon: +90 551 488 24 23.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Üsküdar Fıstıkağacı Veteriner Kliniği">
+  <meta property="og:description" content="Üsküdar, Sultantepe'de veteriner kliniği. Her gün 09:00–23:00.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT@9..144,500,20;9..144,600,20&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #204432;
+      --forest-deep: #173526;
+      --pistachio: #c7d6a0;
+      --pistachio-light: #e9efdb;
+      --cream: #f8f7f0;
+      --paper: #fffefa;
+      --ink: #23372b;
+      --muted: #526257;
+      --line: #dce3d2;
+      --shadow: 0 18px 50px rgba(28, 58, 40, .09);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font: 400 16px/1.65 "DM Sans", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid #8aa94d; outline-offset: 4px; }
+    .container { width: min(100% - 40px, 1200px); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--forest);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 1px; background: currentColor; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 500; line-height: 1.12; }
+    h2 { font-size: clamp(2.2rem, 4.4vw, 4rem); letter-spacing: -.045em; }
+    h3 { font-size: 1.38rem; letter-spacing: -.025em; }
+    .section { padding-block: clamp(76px, 9vw, 132px); }
+    .section-head { max-width: 700px; margin-bottom: 42px; }
+    .section-head h2 { margin: 15px 0 0; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 12px 22px;
+      border: 1px solid transparent;
+      border-radius: 100px;
+      font-size: .94rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+      transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button svg { width: 19px; height: 19px; flex: none; }
+    .button-dark { background: var(--forest); color: #fff; box-shadow: 0 10px 24px rgba(32, 68, 50, .18); }
+    .button-dark:hover { background: var(--forest-deep); }
+    .button-light { background: var(--paper); color: var(--forest); border-color: var(--line); }
+    .button-light:hover { background: var(--pistachio-light); }
+    .button-outline { border-color: rgba(255,255,255,.5); color: #fff; }
+    .button-outline:hover { background: rgba(255,255,255,.12); }
+
+    .site-header {
+      position: relative;
+      z-index: 10;
+      background: var(--cream);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 84px; }
+    .brand {
+      max-width: 340px;
+      color: var(--forest);
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-weight: 600;
+      line-height: 1.15;
+      text-decoration: none;
+    }
+    .header-actions { display: flex; gap: 10px; }
+    .header-actions .button { min-height: 44px; padding: 10px 18px; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--pistachio-light);
+      isolation: isolate;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 760px;
+      height: 760px;
+      right: max(-300px, calc((100vw - 1200px) / 2 - 220px));
+      top: -260px;
+      border: 1px solid rgba(32,68,50,.12);
+      border-radius: 50%;
+      box-shadow: 0 0 0 85px rgba(255,255,255,.12), 0 0 0 170px rgba(32,68,50,.035);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: 8%;
+      bottom: -125px;
+      width: 285px;
+      height: 470px;
+      border-radius: 50% 50% 46% 54%;
+      background: linear-gradient(155deg, rgba(142,169,94,.36), rgba(142,169,94,.06));
+      transform: rotate(35deg);
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 760px) 1fr;
+      align-items: center;
+      min-height: 650px;
+      padding-block: 85px 100px;
+    }
+    .hero h1 {
+      max-width: 780px;
+      margin: 26px 0 25px;
+      color: var(--forest-deep);
+      font-size: clamp(3.3rem, 7.5vw, 7.2rem);
+      letter-spacing: -.065em;
+    }
+    .hero-lead { max-width: 540px; margin-bottom: 26px; color: #344d3b; font-size: clamp(1.05rem, 1.8vw, 1.25rem); }
+    .rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 14px;
+      border: 1px solid rgba(32,68,50,.14);
+      border-radius: 100px;
+      background: rgba(255,255,255,.6);
+      color: var(--forest-deep);
+      font-size: .9rem;
+      font-weight: 700;
+    }
+    .rating-star { color: #8b681c; font-size: 1.15rem; line-height: 1; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .hero-accent {
+      justify-self: end;
+      align-self: end;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(150px, 18vw, 260px);
+      aspect-ratio: 1;
+      margin-bottom: 15px;
+      border: 1px solid rgba(32,68,50,.18);
+      border-radius: 50%;
+      color: var(--forest);
+      transform: rotate(-13deg);
+    }
+    .hero-accent svg { width: 56%; height: 56%; opacity: .65; }
+
+    .services { background: var(--paper); }
+    .service-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+    .service-card {
+      min-height: 195px;
+      padding: 25px 22px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--cream);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .service-card:hover { transform: translateY(-5px); border-color: var(--pistachio); box-shadow: var(--shadow); }
+    .service-icon {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      margin-bottom: 33px;
+      border-radius: 17px;
+      background: var(--pistachio-light);
+      color: var(--forest);
+    }
+    .service-icon svg { width: 29px; height: 29px; }
+    .service-card h3 { margin: 0; }
+
+    .reviews { background: var(--cream); }
+    .reviews-top { display: flex; align-items: end; justify-content: space-between; gap: 24px; }
+    .reviews-top .rating { margin-bottom: 43px; }
+    .review-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 260px;
+      padding: clamp(25px, 3vw, 38px);
+      border: 1px solid var(--line);
+      border-radius: 25px;
+      background: var(--paper);
+      box-shadow: 0 8px 25px rgba(32,68,50,.035);
+    }
+    .stars { color: #927124; letter-spacing: .17em; font-size: 1.1rem; }
+    .review-card blockquote { margin: 22px 0 26px; flex: 1; line-height: 1.75; }
+    .review-card cite { color: var(--forest); font-style: normal; font-weight: 700; }
+
+    .place { background: var(--pistachio-light); }
+    .place-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: clamp(36px, 7vw, 100px); }
+    .place-photo {
+      margin: 0;
+      overflow: hidden;
+      aspect-ratio: 5 / 4;
+      border: 9px solid var(--paper);
+      border-radius: 30px;
+      background: #d7dfcb;
+      box-shadow: var(--shadow);
+    }
+    .place-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .place-copy h2 { margin: 18px 0 22px; }
+    .place-copy p { max-width: 460px; color: #435747; font-size: 1.06rem; }
+    .access {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-top: 28px;
+      padding-top: 23px;
+      border-top: 1px solid rgba(32,68,50,.2);
+      color: var(--forest-deep);
+      font-weight: 600;
+    }
+    .access svg { width: 24px; height: 24px; flex: none; margin-top: 2px; }
+
+    .visit { background: var(--paper); }
+    .visit-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(28px, 5vw, 70px); align-items: start; }
+    .visit-info h2 { margin: 18px 0 32px; }
+    .info-block { padding: 20px 0; border-top: 1px solid var(--line); }
+    .info-block:last-of-type { border-bottom: 1px solid var(--line); }
+    .info-label { display: block; margin-bottom: 8px; color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .hours { width: 100%; border-collapse: collapse; font-size: 1.06rem; }
+    .hours th, .hours td { padding: 0; text-align: left; vertical-align: top; }
+    .hours th { font-weight: 600; }
+    .hours td { text-align: right; font-weight: 700; color: var(--forest); }
+    address { font-style: normal; font-size: 1.06rem; line-height: 1.6; }
+    .visit-info .button { margin-top: 28px; }
+    .map-frame {
+      overflow: hidden;
+      height: 460px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--pistachio-light);
+      box-shadow: var(--shadow);
+    }
+    .map-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+    .final-cta { padding-block: clamp(70px, 8vw, 110px); background: var(--forest); color: #fff; }
+    .final-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 35px; }
+    .final-cta .eyebrow { color: var(--pistachio); }
+    .final-cta h2 { max-width: 690px; margin: 16px 0 0; }
+    .final-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .final-actions .button-light { border-color: transparent; }
+
+    .site-footer { background: var(--forest-deep); color: #edf3e8; padding: 45px 0 100px; }
+    .footer-main { display: grid; grid-template-columns: 1.2fr 1fr auto; gap: 24px; align-items: start; }
+    .footer-name { max-width: 280px; font-family: "Fraunces", Georgia, serif; font-size: 1.35rem; line-height: 1.25; }
+    .footer-main address, .footer-main a { color: #edf3e8; font-size: .94rem; }
+    .footer-main a { text-decoration-color: rgba(237,243,232,.5); text-underline-offset: 4px; }
+    .sample-note {
+      margin: 42px 0 0;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.18);
+      color: #c4d1c3;
+      font-size: .78rem;
+      line-height: 1.5;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 1000px) {
+      .service-grid { grid-template-columns: repeat(3, 1fr); }
+      .hero-accent { opacity: .45; }
+    }
+    @media (max-width: 720px) {
+      .header-inner { min-height: 70px; }
+      .header-actions { display: none; }
+      .hero-inner { display: block; min-height: 0; padding-block: 76px 91px; }
+      .hero h1 { max-width: 600px; }
+      .hero-accent { display: none; }
+      .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .review-grid, .place-grid, .visit-grid { grid-template-columns: 1fr; }
+      .reviews-top { display: block; }
+      .reviews-top .rating { margin: 0 0 30px; }
+      .place-photo { aspect-ratio: 1.15; }
+      .map-frame { height: 350px; }
+      .final-cta-inner { display: block; }
+      .final-actions { margin-top: 28px; }
+      .footer-main { grid-template-columns: 1fr 1fr; }
+      .footer-name { grid-column: 1 / -1; }
+      .site-footer { padding-bottom: 116px; }
+      .mobile-bar {
+        position: fixed;
+        z-index: 30;
+        right: 10px;
+        bottom: max(10px, env(safe-area-inset-bottom));
+        left: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 5px;
+        padding: 6px;
+        border: 1px solid rgba(255,255,255,.18);
+        border-radius: 20px;
+        background: var(--forest-deep);
+        box-shadow: 0 12px 35px rgba(17,43,26,.3);
+      }
+      .mobile-bar a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        min-height: 53px;
+        border-radius: 14px;
+        color: #fff;
+        font-size: .72rem;
+        font-weight: 700;
+        line-height: 1.1;
+        text-decoration: none;
+      }
+      .mobile-bar a:hover { background: rgba(255,255,255,.1); }
+      .mobile-bar svg { width: 20px; height: 20px; }
+    }
+    @media (min-width: 721px) { .mobile-bar { display: none; } }
+    @media (max-width: 480px) {
+      .container { width: min(100% - 32px, 1200px); }
+      .hero h1 { font-size: clamp(3.1rem, 13vw, 4.2rem); }
+      .hero-actions .button { width: 100%; }
+      .service-grid { gap: 10px; }
+      .service-card { min-height: 160px; padding: 18px; }
+      .service-icon { width: 46px; height: 46px; margin-bottom: 24px; }
+      .service-card h3 { font-size: 1.16rem; }
+      .review-card { min-height: 0; }
+      .footer-main { grid-template-columns: 1fr; }
+      .footer-name { grid-column: auto; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VeterinaryCare",
+    "name": "Üsküdar Fıstıkağacı Veteriner Kliniği",
+    "telephone": "+905514882423",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sultantepe Mah. Selvilik Cd. No:97/A",
+      "postalCode": "34674",
+      "addressLocality": "Üsküdar",
+      "addressRegion": "İstanbul",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.0276222,
+      "longitude": 29.0251012
+    },
+    "openingHours": "Mo-Su 09:00-23:00",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.9,
+      "reviewCount": 219
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#ust" aria-label="Üsküdar Fıstıkağacı Veteriner Kliniği, sayfanın başına dön">Üsküdar Fıstıkağacı<br>Veteriner Kliniği</a>
+      <nav class="header-actions" aria-label="Hızlı iletişim">
+        <a class="button button-light" href="tel:+905514882423">Ara</a>
+        <a class="button button-dark" href="https://wa.me/905514882423?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="ust">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <span class="eyebrow">Üsküdar · Veteriner Kliniği</span>
+          <h1 id="hero-title">Fıstıkağacı<br>Veteriner Kliniği</h1>
+          <p class="hero-lead">Üsküdar, Sultantepe'de her gün 09:00–23:00 saatleri arasında açığız.</p>
+          <div class="rating" aria-label="5 üzerinden 4,9 puan, 219 Google yorumu">
+            <span class="rating-star" aria-hidden="true">★</span>
+            <span>4.9 · 219 Google yorumu</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-dark" href="https://wa.me/905514882423?text=Merhaba%2C%20randevu%20almak%20istiyorum">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.2A8 8 0 1 1 20 11.5Z"/><path d="M9 8.8c.6 2.8 2.4 4.6 5.2 5.2l1.4-1.1 1.5 1.4c-.2 1.1-.9 1.8-2 1.8-4.2-.2-7.2-3.2-7.4-7.4 0-1.1.7-1.8 1.8-2l1.4 1.5L9 8.8Z"/></svg>
+              WhatsApp'tan Randevu
+            </a>
+            <a class="button button-light" href="tel:+905514882423">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.2 3.5 4.5 5.8c-.7.6-.9 1.6-.6 2.5 1.9 5.5 6.3 9.9 11.8 11.8.9.3 1.9.1 2.5-.6l2.3-2.7-4.5-3.3-2.3 2.1a15 15 0 0 1-5.3-5.3l2.1-2.3-3.3-4.5Z"/></svg>
+              Hemen Ara
+            </a>
+          </div>
+        </div>
+        <div class="hero-accent" aria-hidden="true">
+          <svg viewBox="0 0 160 160" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M81 133V71M81 97c-29-2-46-19-47-46 28 0 45 16 47 46ZM81 83c2-28 19-45 47-46-1 27-18 44-47 46ZM81 117c20-1 33-13 35-32-20 1-32 12-35 32Z"/>
+            <path d="M56 133h50"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Hizmetlerimiz</span>
+          <h2 id="services-title">Dostlarınız için</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <span class="service-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 27s-10-5.5-10-13a5.5 5.5 0 0 1 10-3.2A5.5 5.5 0 0 1 26 14c0 7.5-10 13-10 13Z"/><path d="M12 17h8M16 13v8"/></svg></span>
+            <h3>Kısırlaştırma</h3>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 24 13-13M18 8l6 6M6 26l4-1-3-3-1 4ZM21 5l6 6-3 3-6-6 3-3Z"/><path d="M23 20v6M20 23h6"/></svg></span>
+            <h3>Aşı</h3>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6c-3 0-5 3-5 7 0 6 3 13 6 13 2 0 2-7 5-7s3 7 5 7c3 0 6-7 6-13 0-4-2-7-5-7-2 0-4 2-6 2s-4-2-6-2Z"/></svg></span>
+            <h3>Diş çekimi</h3>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 27V8a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v19M5 27h22M12 13h8M16 9v8M12 27v-6h8v6"/></svg></span>
+            <h3>Yoğun bakım</h3>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="9" width="18" height="14" rx="3"/><path d="M12 6v3M20 6v3M12 23v3M20 23v3M16 13v6M13 16h6"/></svg></span>
+            <h3>Çip</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="reviews-top">
+          <div class="section-head reveal">
+            <span class="eyebrow">Google yorumları</span>
+            <h2 id="reviews-title">Müşterilerimiz ne diyor</h2>
+          </div>
+          <div class="rating reveal" aria-label="5 üzerinden 4,9 puan, 219 Google yorumu"><span class="rating-star" aria-hidden="true">★</span> 4.9 · 219 Google yorumu</div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card reveal">
+            <div class="stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Köpeğim Hektorun bir süredir kusma şikayeti vardı. Çok endişeliydik. Ama Ali hoca ve Yusuf hoca sayesinde artık sağlığına kavuştu. Artık her konuda fıstıkagaci veteriner kliniğine gidiyoruz. Hem ilgili, güler yüzlü hem de profesyoneller.”</blockquote>
+            <cite>Yetkin C.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Gittiğimiz günden beri başka yere gitmedik. Hem hekimler hem ekip çok ilgili, asla ticari yaklaşım yok. Süreci detaylı anlatıyorlar, gereksiz işlem yapmıyorlar. Temiz, düzenli ve güven veren bir klinik.”</blockquote>
+            <cite>Firdevs H.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Kedimin sabaha karşı evde nefes alamamaya başlaması üzerine eve yakın olması sebebiyle acilen gittik. Kedime doğru müdahaleyi yaptılar, saatlerce uykusuz kalıp ilgilendiler. Kedimin yaşadığı bu rahatsızlık böyle iyi hekimleri bulmamıza vesile oldu.”</blockquote>
+            <cite>Burcu Y.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Kedimin uzun süredir göz problemi vardı, çok fazla klinik gezdik ama sonunda doğru kliniği bulduk. Kedimin tedavisi devam etmekte, ilgi ve alakaları için Yusuf ve Ali beye çok teşekkür ediyorum.”</blockquote>
+            <cite>HANİFE</cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section place" aria-labelledby="place-title">
+      <div class="container place-grid">
+        <figure class="place-photo reveal">
+          <img src="foto.jpg" alt="Üsküdar Fıstıkağacı Veteriner Kliniği fotoğrafı" loading="lazy">
+        </figure>
+        <div class="place-copy reveal">
+          <span class="eyebrow">Mekânımız</span>
+          <h2 id="place-title">Bizi ziyaret edin</h2>
+          <p>Sultantepe Mah. Selvilik Cd. No:97/A, 34674 Üsküdar/İstanbul adresindeyiz.</p>
+          <div class="access">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M12 7v6h5l3 5M12 10H8M11 13a6 6 0 1 0 6 7"/></svg>
+            <span>Tekerlekli sandalye erişimli oturma alanı ve tuvalet</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section visit" aria-labelledby="visit-title">
+      <div class="container visit-grid">
+        <div class="visit-info reveal">
+          <span class="eyebrow">Konum ve saatler</span>
+          <h2 id="visit-title">Yolunuz düşerse</h2>
+          <div class="info-block">
+            <span class="info-label">Çalışma saatleri</span>
+            <table class="hours">
+              <tbody>
+                <tr><th scope="row">Her gün</th><td>09:00–23:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="info-block">
+            <span class="info-label">Adres</span>
+            <address>Sultantepe Mah. Selvilik Cd. No:97/A, 34674 Üsküdar/İstanbul</address>
+          </div>
+          <a class="button button-dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=41.0276222,29.0251012" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Yol tarifi al
+          </a>
+        </div>
+        <div class="map-frame reveal">
+          <iframe title="Üsküdar Fıstıkağacı Veteriner Kliniği konumu" src="https://maps.google.com/maps?q=41.0276222,29.0251012&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="container final-cta-inner">
+        <div>
+          <span class="eyebrow">İletişim</span>
+          <h2 id="cta-title">Randevu için bize ulaşın.</h2>
+        </div>
+        <div class="final-actions">
+          <a class="button button-light" href="https://wa.me/905514882423?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp'tan Randevu</a>
+          <a class="button button-outline" href="tel:+905514882423">Hemen Ara</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-name">Üsküdar Fıstıkağacı Veteriner Kliniği</div>
+        <address>Sultantepe Mah. Selvilik Cd. No:97/A, 34674 Üsküdar/İstanbul</address>
+        <a href="tel:+905514882423">+90 551 488 24 23</a>
+      </div>
+      <p class="sample-note">Bu sayfa Üsküdar Fıstıkağacı Veteriner Kliniği için hazırlanmış örnek bir tasarımdır. Bilgiler Google işletme profilinden alınmıştır.</p>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="Mobil hızlı erişim">
+    <a href="tel:+905514882423">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.2 3.5 4.5 5.8c-.7.6-.9 1.6-.6 2.5 1.9 5.5 6.3 9.9 11.8 11.8.9.3 1.9.1 2.5-.6l2.3-2.7-4.5-3.3-2.3 2.1a15 15 0 0 1-5.3-5.3l2.1-2.3-3.3-4.5Z"/></svg>
+      Ara
+    </a>
+    <a href="https://wa.me/905514882423?text=Merhaba%2C%20randevu%20almak%20istiyorum">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.2A8 8 0 1 1 20 11.5Z"/><path d="M9 8.8c.6 2.8 2.4 4.6 5.2 5.2l1.4-1.1 1.5 1.4c-.2 1.1-.9 1.8-2 1.8-4.2-.2-7.2-3.2-7.4-7.4 0-1.1.7-1.8 1.8-2l1.4 1.5L9 8.8Z"/></svg>
+      WhatsApp
+    </a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=41.0276222,29.0251012" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      Yol Tarifi
+    </a>
+  </nav>
+
+  <script>
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    } else {
+      document.querySelectorAll(".reveal").forEach((element) => element.classList.add("visible"));
+    }
+  </script>
+</body>
+</html>

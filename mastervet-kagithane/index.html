@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123e63">
+  <meta name="description" content="Master Vet Kağıthane Veteriner Kliniği, Çeliktepe Mahallesi'nde koruyucu hekimlik, teşhis ve tedavi, ameliyat, laboratuvar ve diğer veterinerlik hizmetleri sunar. Her gün 10:00–20:00 açıktır.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Master Vet Kağıthane Veteriner Kliniği | Kağıthane Veteriner Kliniği">
+  <meta property="og:description" content="Kağıthane'de koruyucu hekimlik başta olmak üzere veterinerlik hizmetleri. Her gün 10:00–20:00.">
+  <title>Master Vet Kağıthane Veteriner Kliniği | Kağıthane Veteriner Kliniği</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #123e63;
+      --navy-dark: #0c2b48;
+      --blue: #246b9b;
+      --sky: #eaf5fa;
+      --pale: #f6fafc;
+      --ink: #18364b;
+      --muted: #526a78;
+      --line: #d8e6ed;
+      --white: #fff;
+      --radius: 22px;
+      --shadow: 0 18px 50px rgba(18, 62, 99, .09);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      padding-bottom: 76px;
+      color: var(--ink);
+      background: var(--white);
+      font: 400 16px/1.65 "DM Sans", sans-serif;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: "Manrope", sans-serif; line-height: 1.13; letter-spacing: -.045em; }
+    a { color: inherit; }
+    svg { display: block; }
+    .container { width: min(100% - 40px, 1200px); margin-inline: auto; }
+    .skip-link {
+      position: absolute; z-index: 100; top: -80px; left: 16px;
+      padding: 10px 16px; background: var(--white); color: var(--navy);
+    }
+    .skip-link:focus { top: 12px; }
+    :focus-visible { outline: 3px solid #dc9f38; outline-offset: 3px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 9px;
+      color: var(--blue); font: 800 .75rem/1.4 "Manrope", sans-serif;
+      letter-spacing: .14em; text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 22px; height: 2px; background: currentColor; }
+    .section-heading { max-width: 670px; margin-bottom: 32px; }
+    .section-heading h2 { margin: 12px 0 0; font-size: clamp(2rem, 4.2vw, 3.5rem); }
+    .section-heading p { margin: 16px 0 0; color: var(--muted); }
+
+    .site-header { position: relative; z-index: 2; background: var(--white); border-bottom: 1px solid var(--line); }
+    .header-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: inline-flex; flex-direction: column; text-decoration: none; color: var(--navy); line-height: 1.13; }
+    .brand strong { font: 800 clamp(1.15rem, 2.4vw, 1.5rem)/1.2 "Manrope", sans-serif; letter-spacing: -.05em; }
+    .brand span { margin-top: 3px; color: var(--muted); font-size: .72rem; letter-spacing: .06em; }
+    .header-actions { display: flex; gap: 10px; }
+    .button {
+      min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 12px 20px; border: 1px solid transparent; border-radius: 999px;
+      font: 700 .92rem/1.2 "Manrope", sans-serif; text-decoration: none; text-align: center;
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button svg { width: 18px; height: 18px; flex: none; }
+    .button-primary { color: var(--white); background: var(--navy); box-shadow: 0 10px 22px rgba(18, 62, 99, .16); }
+    .button-primary:hover { background: var(--navy-dark); box-shadow: 0 14px 28px rgba(18, 62, 99, .22); }
+    .button-outline { color: var(--navy); border-color: #a9c3d2; background: var(--white); }
+    .button-outline:hover { border-color: var(--navy); background: var(--pale); }
+    .button-light { color: var(--navy); background: var(--white); }
+
+    .hero {
+      overflow: hidden;
+      background: linear-gradient(145deg, #f7fbfd 0%, #eaf5fa 62%, #deedf5 100%);
+    }
+    .hero-grid { display: grid; grid-template-columns: 1fr; }
+    .hero-copy { padding: 74px 0 70px; }
+    .hero h1 { max-width: 760px; margin: 20px 0 22px; color: var(--navy-dark); font-size: clamp(2.8rem, 6.5vw, 5.8rem); font-weight: 800; }
+    .hero h1 span { color: var(--blue); }
+    .hero-lead { max-width: 590px; margin-bottom: 26px; color: #415d6e; font-size: clamp(1rem, 1.45vw, 1.15rem); line-height: 1.8; }
+    .rating {
+      display: inline-flex; align-items: center; gap: 9px; min-height: 40px;
+      padding: 7px 14px; border: 1px solid #cbdfe9; border-radius: 999px;
+      color: var(--navy); background: rgba(255,255,255,.8); font-weight: 700; font-size: .88rem;
+    }
+    .rating .star { color: #a76800; font-size: 1.1rem; line-height: 1; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 29px; }
+    .hero-art {
+      position: relative; display: grid; place-items: center;
+      min-height: 340px; overflow: hidden;
+      background: radial-gradient(circle at 78% 18%, #3b80a8 0, transparent 35%), linear-gradient(150deg, #286e9d, #123e63 68%, #0d314f);
+      border-radius: 30px 30px 0 0;
+      isolation: isolate;
+    }
+    .hero-art::before, .hero-art::after {
+      content: ""; position: absolute; border: 1px solid rgba(255,255,255,.2); border-radius: 50%;
+    }
+    .hero-art::before { width: 390px; height: 390px; }
+    .hero-art::after { width: 560px; height: 560px; }
+    .art-dots {
+      position: absolute; inset: 0; opacity: .22;
+      background-image: radial-gradient(circle, #fff 1px, transparent 1.5px);
+      background-size: 23px 23px; mask-image: linear-gradient(115deg, transparent 20%, #000);
+    }
+    .art-mark {
+      position: relative; z-index: 1; width: min(53%, 250px); aspect-ratio: 1;
+      display: grid; place-items: center; border-radius: 50%;
+      background: rgba(255,255,255,.11); box-shadow: inset 0 0 0 1px rgba(255,255,255,.27), 0 25px 60px rgba(5,31,51,.18);
+      backdrop-filter: blur(5px);
+    }
+    .art-mark svg { width: 63%; height: 63%; color: var(--white); }
+    .art-caption {
+      position: absolute; z-index: 1; bottom: 28px; left: 30px; right: 30px;
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      color: rgba(255,255,255,.88); font: 600 .78rem/1.4 "Manrope", sans-serif; letter-spacing: .08em;
+    }
+    .art-caption::after { content: ""; flex: 1; height: 1px; max-width: 90px; background: rgba(255,255,255,.5); }
+
+    section { scroll-margin-top: 24px; }
+    .services { padding: 100px 0 110px; }
+    .service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .service-card {
+      min-height: 164px; display: flex; flex-direction: column; justify-content: space-between;
+      padding: 22px; border: 1px solid var(--line); border-radius: var(--radius);
+      background: var(--white); box-shadow: 0 5px 24px rgba(18,62,99,.035);
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .service-card:hover { transform: translateY(-5px); border-color: #a8cadb; box-shadow: var(--shadow); }
+    .service-icon { width: 43px; height: 43px; display: grid; place-items: center; border-radius: 13px; background: var(--sky); color: var(--blue); }
+    .service-icon svg { width: 24px; height: 24px; }
+    .service-card h3 { margin: 22px 0 0; font-size: clamp(.95rem, 1.3vw, 1.08rem); letter-spacing: -.025em; }
+
+    .reviews { padding: 96px 0 105px; background: var(--pale); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .reviews-top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 32px; }
+    .reviews-top .section-heading { margin-bottom: 0; }
+    .reviews-score { color: var(--navy); font: 800 1.1rem/1.3 "Manrope", sans-serif; }
+    .reviews-score span { color: #a76800; }
+    .review-grid { display: grid; gap: 16px; }
+    .review-card { display: flex; flex-direction: column; min-height: 260px; padding: 28px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 8px 30px rgba(18,62,99,.04); }
+    .review-stars { color: #a76800; letter-spacing: .12em; font-size: 1rem; }
+    .review-card blockquote { margin: 21px 0 24px; flex: 1; color: #334e60; font-size: 1rem; line-height: 1.8; }
+    .review-card cite { padding-top: 18px; border-top: 1px solid var(--line); color: var(--navy); font-style: normal; font-weight: 700; }
+
+    .place { padding: 105px 0; }
+    .place-grid { display: grid; gap: 42px; align-items: center; }
+    .place-image { width: 100%; height: clamp(300px, 47vw, 520px); display: block; object-fit: cover; border-radius: 28px; box-shadow: var(--shadow); }
+    .place-copy h2 { margin: 15px 0 24px; font-size: clamp(2rem, 4.2vw, 3.5rem); }
+    .place-copy p { color: var(--muted); font-size: 1.05rem; }
+    .access {
+      display: flex; align-items: flex-start; gap: 14px; margin-top: 30px; padding: 19px 20px;
+      border: 1px solid var(--line); border-radius: 16px; background: var(--pale);
+      color: var(--navy); font-weight: 600;
+    }
+    .access svg { flex: none; width: 23px; height: 23px; }
+
+    .visit { padding: 100px 0 110px; background: var(--sky); }
+    .visit-grid { display: grid; gap: 28px; }
+    .visit-info { padding: 30px; background: var(--white); border: 1px solid var(--line); border-radius: 26px; box-shadow: var(--shadow); }
+    .visit-info h2 { margin: 13px 0 30px; font-size: clamp(2rem, 4vw, 3.25rem); }
+    .info-label { margin: 0 0 11px; color: var(--blue); font: 800 .76rem/1.3 "Manrope", sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+    .hours { width: 100%; border-collapse: collapse; margin-bottom: 27px; }
+    .hours th, .hours td { padding: 14px 0; border-bottom: 1px solid var(--line); text-align: left; font-size: 1rem; }
+    .hours th { font-weight: 600; }
+    .hours td { text-align: right; color: var(--navy); font-weight: 700; white-space: nowrap; }
+    address { margin-bottom: 25px; color: var(--ink); font-style: normal; line-height: 1.8; }
+    .map-wrap { min-height: 350px; overflow: hidden; border: 1px solid #bed6e2; border-radius: 26px; background: #dcecf3; box-shadow: var(--shadow); }
+    .map-wrap iframe { display: block; width: 100%; height: 100%; min-height: 350px; border: 0; }
+
+    .closing { padding: 74px 0; color: var(--white); background: linear-gradient(115deg, #123e63, #195779); }
+    .closing-inner { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+    .closing h2 { max-width: 650px; margin: 0; font-size: clamp(2rem, 4vw, 3.45rem); }
+    .closing p { margin: 12px 0 0; color: #d6e9f2; }
+    .closing-actions { display: flex; flex-wrap: wrap; gap: 11px; }
+    .closing .button-outline { color: var(--white); border-color: rgba(255,255,255,.55); background: transparent; }
+    .closing .button-outline:hover { background: rgba(255,255,255,.12); }
+
+    footer { padding: 50px 0 30px; background: #09263e; color: #d6e5ed; }
+    .footer-main { display: grid; gap: 24px; padding-bottom: 40px; }
+    footer strong { display: block; color: var(--white); font: 800 1.2rem/1.35 "Manrope", sans-serif; letter-spacing: -.035em; }
+    footer p { margin: 9px 0 0; }
+    footer a { text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .sample-note { padding-top: 22px; border-top: 1px solid rgba(255,255,255,.17); color: #b4cbd8; font-size: .78rem; line-height: 1.7; }
+
+    .mobile-bar {
+      position: fixed; z-index: 10; inset: auto 0 0; display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 5px; padding: 8px max(10px, env(safe-area-inset-left)) max(8px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-right));
+      background: rgba(255,255,255,.97); border-top: 1px solid var(--line); box-shadow: 0 -8px 28px rgba(18,62,99,.1);
+    }
+    .mobile-bar a { min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; border-radius: 11px; color: var(--navy); font: 700 .72rem/1.2 "Manrope", sans-serif; text-decoration: none; }
+    .mobile-bar a:active { background: var(--sky); }
+    .mobile-bar svg { width: 20px; height: 20px; }
+
+    @media (min-width: 700px) {
+      body { padding-bottom: 0; }
+      .mobile-bar { display: none; }
+      .hero-grid { grid-template-columns: minmax(0, 1.12fr) minmax(330px, .88fr); align-items: stretch; gap: 35px; }
+      .hero-copy { padding: 105px 0 110px; }
+      .hero-art { min-height: 590px; margin: 28px 0; border-radius: 30px; }
+      .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; }
+      .service-card { min-height: 190px; padding: 28px; }
+      .review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .place-grid { grid-template-columns: minmax(0, 1fr) minmax(0, .88fr); gap: 8%; }
+      .visit-grid { grid-template-columns: minmax(340px, .75fr) minmax(0, 1.25fr); align-items: stretch; }
+      .map-wrap iframe { min-height: 470px; }
+      .closing-inner { flex-direction: row; align-items: center; justify-content: space-between; }
+      .footer-main { grid-template-columns: 1.5fr 1fr 1fr; }
+    }
+    @media (min-width: 1080px) {
+      .hero-grid { gap: 75px; }
+      .hero-art { min-height: 630px; }
+      .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 430px) {
+      .container { width: min(100% - 32px, 1200px); }
+      .header-inner { min-height: 74px; }
+      .brand span { font-size: .64rem; }
+      .header-actions { gap: 5px; }
+      .header-actions .button { min-height: 44px; padding: 10px 11px; font-size: .78rem; }
+      .header-actions .button svg { display: none; }
+      .hero-copy { padding: 61px 0 55px; }
+      .hero-actions .button { flex: 1 1 100%; }
+      .service-card { padding: 17px; min-height: 155px; }
+      .visit-info { padding: 22px; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .js .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+      .js .reveal.is-visible { opacity: 1; transform: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VeterinaryCare",
+      "name": "Master Vet Kağıthane Veteriner Kliniği",
+      "telephone": "+905322358445",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Çeliktepe Mah. Genç Osman Cd. 39A",
+        "postalCode": "34413",
+        "addressLocality": "Kağıthane",
+        "addressRegion": "İstanbul",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.0817896,
+        "longitude": 28.9981195
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "10:00",
+        "closes": "20:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "276"
+      }
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="0" height="0" style="position:absolute;overflow:hidden">
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l1.2 4.2-2.1 1.6a15 15 0 0 0 7.1 7.1l1.6-2.1L21 15v4a2 2 0 0 1-2 2C10.2 21 3 13.8 3 5a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.3 7.6L3 20l1-5.1a8.5 8.5 0 1 1 16.5-3.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 8.5c.5 2.8 2.2 4.6 5 5.2l1.6-1.3 1.5 1.1c-.3 1.4-1.3 2.1-2.4 2.1-3.7 0-7-3.3-7-7 0-1.2.8-2.1 2-2.4l1.3 1.5-1 1.5Z" fill="currentColor"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 8 3v6c0 5-3.1 8.5-8 11-4.9-2.5-8-6-8-11V5l8-3Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m8.5 11.8 2.3 2.3 4.7-4.7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-8.5-5-8.5-11A4.5 4.5 0 0 1 12 6.8 4.5 4.5 0 0 1 20.5 9c0 6-8.5 11-8.5 11Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 12h2l1.2-2.2 2.1 4.4L13.5 12H17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 2h6M10 2v7L4.7 18a2.7 2.7 0 0 0 2.3 4h10a2.7 2.7 0 0 0 2.3-4L14 9V2M7.5 16h9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M7 3H5a2 2 0 0 0-2 2v2m14-4h2a2 2 0 0 1 2 2v2M3 17v2a2 2 0 0 0 2 2h2m14-4v2a2 2 0 0 1-2 2h-2M7 12h10M12 7v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 4v16h16M7 15l3-4 3 2 4-6 3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M4 8h16l-1 13H5L4 8ZM9 9V6a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v10H3V11Zm7 10v-7h4v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-access" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v7m-4-4h8m-4 4 4 7m-4-7-4 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#main" aria-label="Master Vet Kağıthane Veteriner Kliniği, sayfa başına dön">
+        <strong>Master Vet</strong>
+        <span>KAĞITHANE VETERİNER KLİNİĞİ</span>
+      </a>
+      <nav class="header-actions" aria-label="Hızlı iletişim">
+        <a class="button button-outline" href="tel:+905322358445"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ara</a>
+        <a class="button button-primary" href="https://wa.me/905322358445?text=Merhaba%2C%20randevu%20almak%20istiyorum"><svg aria-hidden="true"><use href="#i-message"/></svg>WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Veteriner Kliniği · Kağıthane</span>
+          <h1 id="hero-title">Minik kalpler için <span>özenli bir yaklaşım.</span></h1>
+          <p class="hero-lead">Son teknoloji ürünlerle donatılmış kliniğimizde başta koruyucu hekimlik olmak üzere birçok hizmet sunuyoruz.</p>
+          <div class="rating" aria-label="Google puanı 4,8; 276 yorum"><span class="star" aria-hidden="true">★</span> 4.8 · 276 Google yorumu</div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://wa.me/905322358445?text=Merhaba%2C%20randevu%20almak%20istiyorum"><svg aria-hidden="true"><use href="#i-message"/></svg>WhatsApp'tan Randevu</a>
+            <a class="button button-outline" href="tel:+905322358445"><svg aria-hidden="true"><use href="#i-phone"/></svg>Hemen Ara</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-dots"></div>
+          <div class="art-mark">
+            <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="80" cy="80" r="66" stroke="currentColor" stroke-opacity=".45"/>
+              <path d="M80 35v90M35 80h90" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+              <circle cx="80" cy="80" r="19" fill="#246b9b" stroke="currentColor" stroke-width="5"/>
+            </svg>
+          </div>
+          <div class="art-caption">MASTER VET · KAĞITHANE</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="hizmetler" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Hizmetlerimiz</span>
+          <h2 id="services-title">İhtiyaç duyduğunuz bakım, bir arada.</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal"><div class="service-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></div><h3>Koruyucu hekimlik</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg aria-hidden="true"><use href="#i-heart"/></svg></div><h3>Teşhis ve tedavi</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg aria-hidden="true"><use href="#i-plus"/></svg></div><h3>Ameliyat</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg aria-hidden="true"><use href="#i-heart"/></svg></div><h3>Yoğun bakım</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg aria-hidden="true"><use href="#i-flask"/></svg></div><h3>Laboratuvar</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg aria-hidden="true"><use href="#i-scan"/></svg></div><h3>Röntgen (CR)</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg aria-hidden="true"><use href="#i-chart"/></svg></div><h3>Hemogram ve biyokimya</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg aria-hidden="true"><use href="#i-bag"/></svg></div><h3>Pet ürünleri ve mama</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg aria-hidden="true"><use href="#i-home"/></svg></div><h3>Evlere servis</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="yorumlar" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="reviews-top reveal">
+          <div class="section-heading">
+            <span class="eyebrow">Yorumlar</span>
+            <h2 id="reviews-title">Müşterilerimiz ne diyor</h2>
+          </div>
+          <div class="reviews-score"><span aria-hidden="true">★</span> 4.8 · 276 Google yorumu</div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="Beş yıldız">★★★★★</div>
+            <blockquote>“Bu güne kadar gitmediğim veteriner kalmadı tesadüfen Ömer beyi buldum iyiki bulmuşum kızama kendi kızı gibi baktı iyileştirdi kısırlaştırdı bir daha yakasını bırakmayız ikinci evimizde orası artık çok teşekkürler Ömer bey :)”</blockquote>
+            <cite>Figen E.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="Beş yıldız">★★★★★</div>
+            <blockquote>“Benim deli kızımın rutin muayenelerini aşılarını traşını korkutmadan yapan, nadir veterinerlerdendir.Ömer bey, duyarlı, kaliteli hizmeti ile bütün can dostlarımıza itina ile yaklaşmaktadır.Reçelimle çok memnunum kendisinden”</blockquote>
+            <cite>Elif D.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="Beş yıldız">★★★★★</div>
+            <blockquote>“Çeliktepe ve Kagithanenin en iyi veteriner hekimi bence Ömer bey. Kedimiz Behlülü her zaman ona emanet ediyoruz.Master Vet hijyen,kalite ve sıcacık sevgi dolu yaklaşimiyla patili dostlarimiz için mükemmel bir yer.”</blockquote>
+            <cite>Tuncay A.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="Beş yıldız">★★★★★</div>
+            <blockquote>“Köpüşümü ömer hoca ameliyat etmişti bugün kontrol için gittik ilgisi ve detaylı bilgisi için çok teşekkür ederiz gerçekten güvenerek küçük dostlarınızı götürebilirsiniz”</blockquote>
+            <cite>Duygu G.</cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="place" id="mekan" aria-labelledby="place-title">
+      <div class="container place-grid">
+        <div class="reveal">
+          <img class="place-image" src="foto.jpg" alt="Master Vet Kağıthane Veteriner Kliniği fotoğrafı" loading="lazy">
+        </div>
+        <div class="place-copy reveal">
+          <span class="eyebrow">Mekânımız</span>
+          <h2 id="place-title">Bizi ziyaret edin.</h2>
+          <p>Master Vet Veteriner Kliniği ailesi olarak veterinerlik konusunda yıllardır bilgi birikimimizle kendimizi geliştirdik; minik kalplerin sevgisiyle Kağıthane'de yepyeni bir veteriner hekimlik hizmeti sunmayı hedefliyoruz.</p>
+          <div class="access">
+            <svg aria-hidden="true"><use href="#i-access"/></svg>
+            <span>Tekerlekli sandalye erişimli giriş ve otopark</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="iletisim" aria-labelledby="visit-title">
+      <div class="container visit-grid">
+        <div class="visit-info reveal">
+          <span class="eyebrow">Konum ve saatler</span>
+          <h2 id="visit-title">Bize ulaşın.</h2>
+          <p class="info-label">Çalışma saatleri</p>
+          <table class="hours">
+            <tbody>
+              <tr><th scope="row">Her gün</th><td>10:00–20:00</td></tr>
+            </tbody>
+          </table>
+          <p class="info-label">Adres</p>
+          <address>Çeliktepe Mah. Genç Osman Cd. 39A,<br>34413 Kağıthane/İstanbul</address>
+          <a class="button button-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=41.0817896,28.9981195" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-pin"/></svg>Yol tarifi al</a>
+        </div>
+        <div class="map-wrap reveal">
+          <iframe title="Master Vet Kağıthane Veteriner Kliniği harita konumu" src="https://maps.google.com/maps?q=41.0817896,28.9981195&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="container closing-inner">
+        <div>
+          <h2 id="closing-title">Minik dostunuz için iletişime geçin.</h2>
+          <p>Master Vet Kağıthane Veteriner Kliniği · Her gün 10:00–20:00</p>
+        </div>
+        <div class="closing-actions">
+          <a class="button button-light" href="https://wa.me/905322358445?text=Merhaba%2C%20randevu%20almak%20istiyorum"><svg aria-hidden="true"><use href="#i-message"/></svg>WhatsApp'tan Randevu</a>
+          <a class="button button-outline" href="tel:+905322358445"><svg aria-hidden="true"><use href="#i-phone"/></svg>Hemen Ara</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div><strong>Master Vet Kağıthane Veteriner Kliniği</strong></div>
+        <div><strong>Adres</strong><p>Çeliktepe Mah. Genç Osman Cd. 39A, 34413 Kağıthane/İstanbul</p></div>
+        <div><strong>Telefon</strong><p><a href="tel:+905322358445">+90 532 235 84 45</a></p></div>
+      </div>
+      <div class="sample-note">Bu sayfa Master Vet Kağıthane Veteriner Kliniği için hazırlanmış örnek bir tasarımdır. Bilgiler Google işletme profilinden alınmıştır.</div>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="Mobil hızlı erişim">
+    <a href="tel:+905322358445"><svg aria-hidden="true"><use href="#i-phone"/></svg><span>Ara</span></a>
+    <a href="https://wa.me/905322358445?text=Merhaba%2C%20randevu%20almak%20istiyorum"><svg aria-hidden="true"><use href="#i-message"/></svg><span>WhatsApp</span></a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=41.0817896,28.9981195" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Yol Tarifi</span></a>
+  </nav>
+
+  <script>
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+    }
+  </script>
+</body>
+</html>

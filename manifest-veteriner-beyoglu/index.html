@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b40">
+  <meta name="description" content="Manifest Veteriner Kliniği, Sütlüce Beyoğlu'nda acil veterinerlik ve veteriner ilaçları hizmetleri sunar. Her gün 10:00–20:00 açıktır.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:title" content="Manifest Veteriner Kliniği | Sütlüce Veteriner Muayenehanesi">
+  <meta property="og:description" content="Sütlüce, Beyoğlu'nda acil veterinerlik ve veteriner ilaçları. Her gün 10:00–20:00.">
+  <title>Manifest Veteriner Kliniği | Sütlüce Veteriner Muayenehanesi · Acil Veteriner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #102b40;
+      --navy-soft: #23475b;
+      --teal: #087d83;
+      --teal-dark: #08686e;
+      --mint: #dff4ef;
+      --cream: #f7faf8;
+      --line: #d7e5e4;
+      --text: #263d4b;
+      --white: #fff;
+      --shadow: 0 22px 60px rgba(16, 43, 64, .10);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--cream);
+      font-family: "DM Sans", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    img { display: block; max-width: 100%; }
+    svg { display: block; }
+    :focus-visible { outline: 3px solid #edb85a; outline-offset: 4px; }
+    .container { width: min(100% - 40px, 1200px); margin-inline: auto; }
+    .section { padding: clamp(76px, 9vw, 132px) 0; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--teal-dark);
+      font: 800 .76rem/1.3 "Manrope", sans-serif;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 23px;
+      height: 2px;
+      background: currentColor;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 {
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      letter-spacing: -.055em;
+    }
+    h2 { font-size: clamp(2.15rem, 5vw, 4.35rem); line-height: 1.12; }
+    h3 { font-size: 1.23rem; line-height: 1.35; }
+    .section-heading { max-width: 720px; margin-bottom: 38px; }
+    .section-heading h2 { margin: 15px 0 14px; }
+    .section-heading p { max-width: 600px; margin-bottom: 0; color: #496372; }
+
+    .site-header {
+      position: relative;
+      z-index: 10;
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 82px;
+    }
+    .brand {
+      max-width: 230px;
+      color: var(--navy);
+      font: 800 clamp(1.05rem, 2vw, 1.33rem)/1.17 "Manrope", sans-serif;
+      letter-spacing: -.055em;
+      text-decoration: none;
+    }
+    .brand span { color: var(--teal); }
+    .header-actions, .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 12px 20px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      font: 700 .91rem/1.2 "Manrope", sans-serif;
+      text-align: center;
+      text-decoration: none;
+      transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    .button:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(16, 43, 64, .13); }
+    .button svg { width: 19px; height: 19px; flex: none; }
+    .button-dark { color: #fff; background: var(--navy); }
+    .button-dark:hover { background: #1d4056; }
+    .button-teal { color: #fff; background: var(--teal-dark); }
+    .button-teal:hover { background: #075a60; }
+    .button-outline { color: var(--navy); background: #fff; border-color: #bad1d3; }
+    .button-outline:hover { border-color: var(--teal); }
+    .button-light { color: var(--navy); background: #fff; }
+    .header-actions .button { min-height: 44px; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      min-height: 660px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 86% 33%, rgba(48, 177, 171, .26), transparent 27%),
+        radial-gradient(circle at 56% 103%, rgba(42, 164, 166, .21), transparent 31%),
+        linear-gradient(125deg, #102b40 7%, #123e50 65%, #0c555a 100%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: .23;
+      background-image: radial-gradient(rgba(221, 255, 248, .64) 1px, transparent 1px);
+      background-size: 24px 24px;
+      mask-image: linear-gradient(90deg, transparent 18%, #000 100%);
+    }
+    .hero-inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(270px, .92fr);
+      align-items: center;
+      gap: 50px;
+      min-height: 660px;
+      padding-block: 90px 112px;
+    }
+    .hero-copy { position: relative; z-index: 2; max-width: 690px; }
+    .hero .eyebrow { color: #a6e7db; }
+    .hero h1 {
+      margin: 22px 0;
+      color: #fff;
+      font-size: clamp(3.4rem, 7vw, 6.8rem);
+      line-height: .99;
+      letter-spacing: -.075em;
+    }
+    .hero h1 span { color: #81d5ca; }
+    .hero-description {
+      max-width: 520px;
+      margin-bottom: 27px;
+      color: #d3e6e8;
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    }
+    .rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 42px;
+      margin-bottom: 31px;
+      padding: 8px 14px;
+      color: #fff;
+      background: rgba(255, 255, 255, .11);
+      border: 1px solid rgba(255, 255, 255, .23);
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: .89rem;
+      backdrop-filter: blur(12px);
+    }
+    .rating .star { color: #ffd885; font-size: 1.1rem; line-height: 1; }
+    .hero .button-outline { color: #fff; background: transparent; border-color: rgba(255, 255, 255, .48); }
+    .hero .button-outline:hover { background: rgba(255, 255, 255, .12); }
+    .hero-art {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 430px;
+    }
+    .art-orbit {
+      position: absolute;
+      width: min(100%, 470px);
+      aspect-ratio: 1;
+      border: 1px solid rgba(193, 242, 231, .22);
+      border-radius: 50%;
+    }
+    .art-orbit::before, .art-orbit::after {
+      content: "";
+      position: absolute;
+      inset: 13%;
+      border: 1px solid rgba(193, 242, 231, .22);
+      border-radius: 50%;
+    }
+    .art-orbit::after { inset: 26%; }
+    .art-symbol {
+      position: relative;
+      width: min(75%, 350px);
+      color: #a8e8dd;
+      filter: drop-shadow(0 25px 60px rgba(0, 0, 0, .1));
+    }
+    .art-symbol svg { width: 100%; height: auto; }
+    .art-dot {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #a8e8dd;
+      box-shadow: 0 0 0 10px rgba(168, 232, 221, .1);
+    }
+    .art-dot.one { top: 14%; left: 20%; }
+    .art-dot.two { right: 12%; bottom: 23%; width: 9px; height: 9px; }
+    .emergency-strip {
+      position: relative;
+      margin-top: -49px;
+      z-index: 3;
+    }
+    .emergency-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 25px 32px;
+      color: #fff;
+      background: var(--teal-dark);
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .emergency-copy { display: flex; align-items: center; gap: 16px; }
+    .emergency-icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      flex: none;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .15);
+    }
+    .emergency-icon svg { width: 26px; height: 26px; }
+    .emergency-copy strong { display: block; font: 800 1.14rem/1.3 "Manrope", sans-serif; }
+    .emergency-copy span { color: #d5f3ed; font-size: .93rem; }
+    .emergency-inner .button { flex: none; }
+
+    .services { padding-top: clamp(100px, 12vw, 150px); }
+    .services-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .services-head .section-heading { margin-bottom: 0; }
+    .service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 44px; }
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 264px;
+      padding: clamp(28px, 4vw, 44px);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 23px;
+      box-shadow: 0 12px 35px rgba(16, 43, 64, .045);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+    .service-card::after {
+      content: "";
+      position: absolute;
+      right: -63px;
+      bottom: -63px;
+      width: 190px;
+      height: 190px;
+      border: 1px solid #e2f2ee;
+      border-radius: 50%;
+      box-shadow: 0 0 0 30px #f7fcfa, 0 0 0 31px #e2f2ee;
+    }
+    .service-icon {
+      display: grid;
+      place-items: center;
+      width: 64px;
+      height: 64px;
+      margin-bottom: 35px;
+      color: var(--teal-dark);
+      background: var(--mint);
+      border-radius: 18px;
+    }
+    .service-icon svg { width: 32px; height: 32px; }
+    .service-card h3 { position: relative; z-index: 1; margin-bottom: 0; font-size: clamp(1.3rem, 2.5vw, 1.7rem); }
+
+    .reviews { background: #eaf4f1; }
+    .reviews-layout { display: grid; grid-template-columns: minmax(230px, .63fr) minmax(0, 1.37fr); gap: 48px; }
+    .review-summary h2 { margin: 16px 0 26px; }
+    .rating-large { display: flex; align-items: baseline; gap: 12px; color: var(--navy); }
+    .rating-large strong { font: 800 clamp(3rem, 5vw, 4.4rem)/1 "Manrope", sans-serif; letter-spacing: -.07em; }
+    .rating-large span { color: var(--teal-dark); font-size: 1.3rem; letter-spacing: .12em; }
+    .review-summary p { margin-top: 10px; color: #4d6871; }
+    .review-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      padding: 28px;
+      background: #fff;
+      border: 1px solid #d9e9e5;
+      border-radius: 20px;
+      box-shadow: 0 10px 28px rgba(16, 43, 64, .045);
+    }
+    .review-card .stars { margin-bottom: 18px; color: #a96b13; letter-spacing: .16em; font-size: 1.08rem; }
+    .review-card blockquote { margin: 0 0 22px; flex: 1; color: var(--text); line-height: 1.7; }
+    .review-card cite {
+      padding-top: 17px;
+      border-top: 1px solid var(--line);
+      color: var(--navy);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .visit-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; gap: clamp(35px, 7vw, 95px); }
+    .visit-photo-wrap {
+      position: relative;
+      padding: 0 22px 22px 0;
+    }
+    .visit-photo-wrap::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 24px 0 0 24px;
+      border: 2px solid #b5dcd6;
+      border-radius: 28px;
+    }
+    .visit-photo {
+      width: 100%;
+      aspect-ratio: 1.18;
+      object-fit: cover;
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      background: #d9e8e4;
+    }
+    .visit-copy h2 { margin: 15px 0 19px; }
+    .visit-copy p { max-width: 480px; color: #496372; font-size: 1.08rem; }
+    .visit-address {
+      display: flex;
+      align-items: start;
+      gap: 12px;
+      margin-top: 30px;
+      padding-top: 23px;
+      border-top: 1px solid var(--line);
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .visit-address svg { width: 22px; height: 22px; flex: none; color: var(--teal-dark); margin-top: 2px; }
+
+    .location { background: #fff; }
+    .location-layout { display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); gap: clamp(30px, 6vw, 80px); align-items: stretch; }
+    .location-info h2 { margin: 15px 0 34px; }
+    .info-block { padding: 23px 0; border-top: 1px solid var(--line); }
+    .info-block h3 { margin-bottom: 9px; font-size: 1rem; letter-spacing: -.025em; }
+    .info-block p { margin-bottom: 0; color: #496372; }
+    .hours-table { width: 100%; border-collapse: collapse; }
+    .hours-table th, .hours-table td { padding: 0; text-align: left; font-weight: 500; }
+    .hours-table td { color: var(--navy); font-weight: 700; text-align: right; }
+    .location-info .button { margin-top: 25px; }
+    .map-frame {
+      overflow: hidden;
+      min-height: 480px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #e4efeb;
+      box-shadow: var(--shadow);
+    }
+    .map-frame iframe { display: block; width: 100%; height: 100%; min-height: 480px; border: 0; }
+
+    .final-cta {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(68px, 9vw, 110px) 0;
+      color: #fff;
+      background: linear-gradient(115deg, #0d7479, #102b40 88%);
+    }
+    .final-cta::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: -170px;
+      width: 520px;
+      height: 520px;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 50%;
+      box-shadow: 0 0 0 65px rgba(255, 255, 255, .035), 0 0 0 130px rgba(255, 255, 255, .025);
+      pointer-events: none;
+    }
+    .final-inner { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .final-cta h2 { max-width: 650px; margin: 0; color: #fff; }
+    .final-cta p { margin: 15px 0 0; color: #d9efeb; }
+    .final-actions { display: flex; flex-wrap: wrap; gap: 10px; flex: none; }
+    .final-actions .button-outline { color: #fff; background: transparent; border-color: rgba(255, 255, 255, .55); }
+
+    .site-footer { padding: 44px 0 30px; color: #d4e3e6; background: var(--navy); }
+    .footer-main { display: grid; grid-template-columns: 1fr 1fr auto; gap: 30px; align-items: start; }
+    .footer-brand { color: #fff; font: 800 1.2rem/1.25 "Manrope", sans-serif; letter-spacing: -.04em; }
+    .footer-main address { max-width: 390px; font-style: normal; }
+    .footer-main a { text-decoration: none; }
+    .footer-main a:hover { text-decoration: underline; }
+    .footer-note {
+      margin: 35px 0 0;
+      padding-top: 23px;
+      border-top: 1px solid rgba(255, 255, 255, .16);
+      color: #a6c3cb;
+      font-size: .77rem;
+    }
+
+    .mobile-actions { display: none; }
+    .js .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    .js .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; min-height: auto; gap: 0; padding-block: 95px 130px; }
+      .hero-art { position: absolute; width: 370px; right: -90px; bottom: 10px; opacity: .23; pointer-events: none; }
+      .hero-copy { max-width: 650px; }
+      .reviews-layout { grid-template-columns: 1fr; gap: 25px; }
+      .review-summary h2 { max-width: 650px; }
+      .visit-layout, .location-layout { grid-template-columns: 1fr; }
+      .visit-copy { max-width: 680px; }
+      .map-frame, .map-frame iframe { min-height: 420px; }
+      .final-inner { align-items: start; flex-direction: column; }
+    }
+    @media (max-width: 640px) {
+      body { padding-bottom: 72px; }
+      .container { width: min(100% - 36px, 1200px); }
+      .header-inner { min-height: 72px; }
+      .brand { max-width: 180px; }
+      .header-actions .button { padding-inline: 13px; font-size: .8rem; }
+      .header-actions .button svg { display: none; }
+      .hero { min-height: auto; }
+      .hero-inner { padding-block: 76px 114px; }
+      .hero h1 { font-size: clamp(3.2rem, 13vw, 4.7rem); }
+      .hero-art { width: 300px; right: -140px; bottom: -25px; }
+      .hero-actions { align-items: stretch; }
+      .hero-actions .button { width: 100%; }
+      .emergency-inner { align-items: stretch; flex-direction: column; padding: 22px; gap: 18px; }
+      .emergency-inner .button { width: 100%; }
+      .services-head { display: block; }
+      .service-grid, .review-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: 220px; }
+      .review-card { padding: 24px; }
+      .visit-photo-wrap { padding: 0 14px 14px 0; }
+      .visit-photo-wrap::after { inset: 14px 0 0 14px; }
+      .map-frame, .map-frame iframe { min-height: 340px; }
+      .final-actions { width: 100%; }
+      .final-actions .button { width: 100%; }
+      .footer-main { grid-template-columns: 1fr; gap: 16px; }
+      .mobile-actions {
+        position: fixed;
+        z-index: 50;
+        inset: auto 0 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 7px 8px calc(7px + env(safe-area-inset-bottom));
+        background: #fff;
+        border-top: 1px solid var(--line);
+        box-shadow: 0 -8px 28px rgba(16, 43, 64, .09);
+      }
+      .mobile-actions a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        min-height: 51px;
+        padding: 5px 3px;
+        color: var(--navy);
+        border-radius: 9px;
+        font: 700 .78rem/1.1 "Manrope", sans-serif;
+        text-align: center;
+        text-decoration: none;
+      }
+      .mobile-actions a:nth-child(2) { color: #fff; background: var(--teal-dark); }
+      .mobile-actions svg { width: 18px; height: 18px; flex: none; }
+    }
+    @media (max-width: 390px) {
+      .brand { max-width: 155px; font-size: 1rem; }
+      .header-actions { gap: 5px; }
+      .header-actions .button { padding-inline: 9px; }
+      .mobile-actions a { flex-direction: column; font-size: .72rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+      .js .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VeterinaryCare",
+    "name": "Manifest Veteriner Kliniği",
+    "description": "Acil veteriner / veteriner muayenehanesi.",
+    "telephone": "+905422192252",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sütlüce Mah. Karaağaç Cd. No:104 D:106A",
+      "postalCode": "34445",
+      "addressLocality": "Beyoğlu",
+      "addressRegion": "İstanbul",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.0531345,
+      "longitude": 28.9427972
+    },
+    "openingHours": "Mo-Su 10:00-20:00",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.9,
+      "reviewCount": 158
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#anasayfa" aria-label="Manifest Veteriner Kliniği, ana sayfa">Manifest <span>Veteriner</span> Kliniği</a>
+      <nav class="header-actions" aria-label="Hızlı iletişim">
+        <a class="button button-outline" href="tel:+905422192252" aria-label="Manifest Veteriner Kliniği'ni ara">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16.4v3a2 2 0 0 1-2.2 2A18.7 18.7 0 0 1 2.6 5.2 2 2 0 0 1 4.6 3h3a2 2 0 0 1 2 1.7l.5 2.8a2 2 0 0 1-.6 1.8L8 10.8a15 15 0 0 0 5.2 5.2l1.5-1.5a2 2 0 0 1 1.8-.6l2.8.5a2 2 0 0 1 1.7 2Z"/></svg>
+          Ara
+        </a>
+        <a class="button button-teal" href="https://wa.me/905422192252?text=Merhaba%2C%20randevu%20almak%20istiyorum" aria-label="WhatsApp üzerinden randevu için yaz">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3.5 20.5l1.5-4.4a8.5 8.5 0 1 1 15.5-4.6Z"/><path d="M8.3 8.4c.4-.4.8-.3 1.1.2l.7 1.1c.2.4.1.7-.2 1l-.5.4a6.4 6.4 0 0 0 3.5 3.5l.4-.5c.3-.3.6-.4 1-.2l1.1.7c.5.3.6.7.2 1.1-.4.5-1 .9-1.7.9-2.8 0-6.9-4.1-6.9-6.9 0-.7.4-1.3.9-1.8Z"/></svg>
+          WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="anasayfa">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Veteriner Muayenehanesi · Acil Veteriner</span>
+          <h1 id="hero-title">Manifest<br><span>Veteriner</span><br>Kliniği</h1>
+          <p class="hero-description">Sütlüce, Beyoğlu'nda acil veteriner ve veteriner muayenehanesi.</p>
+          <div class="rating" aria-label="5 üzerinden 4,9 puan, 158 Google yorumu">
+            <span class="star" aria-hidden="true">★</span> 4.9 · 158 Google yorumu
+          </div>
+          <div class="hero-actions">
+            <a class="button button-light" href="https://wa.me/905422192252?text=Merhaba%2C%20randevu%20almak%20istiyorum">
+              WhatsApp'tan Randevu
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+            <a class="button button-outline" href="tel:+905422192252">Hemen Ara</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit"></div>
+          <span class="art-dot one"></span>
+          <span class="art-dot two"></span>
+          <div class="art-symbol">
+            <svg viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="180" cy="180" r="146" stroke="currentColor" stroke-opacity=".42" stroke-width="2"/>
+              <path d="M180 87v186M87 180h186" stroke="currentColor" stroke-width="17" stroke-linecap="round"/>
+              <circle cx="180" cy="180" r="66" fill="#A8E8DD" fill-opacity=".12" stroke="currentColor" stroke-width="2"/>
+              <path d="M140 216c0-17 13-30 30-30h20c17 0 30 13 30 30 0 15-11 27-26 27-7 0-11-3-14-6-3 3-7 6-14 6-15 0-26-12-26-27Z" fill="currentColor"/>
+              <ellipse cx="130" cy="171" rx="11" ry="16" transform="rotate(-24 130 171)" fill="currentColor"/>
+              <ellipse cx="158" cy="151" rx="11" ry="16" transform="rotate(-8 158 151)" fill="currentColor"/>
+              <ellipse cx="202" cy="151" rx="11" ry="16" transform="rotate(8 202 151)" fill="currentColor"/>
+              <ellipse cx="230" cy="171" rx="11" ry="16" transform="rotate(24 230 171)" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container emergency-strip">
+      <div class="emergency-inner">
+        <div class="emergency-copy">
+          <span class="emergency-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9.5"/></svg>
+          </span>
+          <div>
+            <strong>Acil durumda arayın</strong>
+            <span>Her gün 10:00–20:00</span>
+          </div>
+        </div>
+        <a class="button button-light" href="tel:+905422192252">+90 542 219 22 52</a>
+      </div>
+    </div>
+
+    <section class="section services" id="hizmetler" aria-labelledby="services-title">
+      <div class="container">
+        <div class="services-head reveal">
+          <div class="section-heading">
+            <span class="eyebrow">Hizmetlerimiz</span>
+            <h2 id="services-title">Dostlarınız için<br>buradayız.</h2>
+            <p>Kliniğimizin hizmetleri hakkında bilgi almak için bize ulaşabilirsiniz.</p>
+          </div>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4v24M4 16h24"/><rect x="3" y="3" width="26" height="26" rx="8"/></svg>
+            </div>
+            <h3>Acil veterinerlik</h3>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5h8m-7 0v5l-5.5 5.5a5 5 0 0 0 0 7.1l1.9 1.9a5 5 0 0 0 7.1 0L25 16a5 5 0 0 0 0-7.1L23.1 7a5 5 0 0 0-7.1 0L13 10"/><path d="m12 21 8-8"/></svg>
+            </div>
+            <h3>Veteriner ilaçları</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews" id="yorumlar" aria-labelledby="reviews-title">
+      <div class="container reviews-layout">
+        <div class="review-summary reveal">
+          <span class="eyebrow">Yorumlar</span>
+          <h2 id="reviews-title">Müşterilerimiz ne diyor</h2>
+          <div class="rating-large">
+            <strong>4.9</strong>
+            <span aria-label="5 yıldız">★★★★★</span>
+          </div>
+          <p>158 Google yorumu</p>
+        </div>
+        <div class="review-grid">
+          <article class="review-card reveal">
+            <div class="stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Köpeğimizi kanlı ishal şikayeti ile getirdim. Gerekli testleri yapıldı. Parvo teşhisi koyuldu tedaviye başladık. Bugün tedavinin 2.”</blockquote>
+            <cite>Emre K.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Oğlum bir anda kusmaya başlayıp yemek yiyememişti 2 gün boyunca, halsizdi. Enes bey çok ilgilendi sağolsun, tahliller sonrasında gastrit olduğunu söyledi, tedavi etti. Oğlumu sağlığına kavuşturduğunuz için teşekkür ederim, eski enerjisine kavuştu, çok şükür :)”</blockquote>
+            <cite>Elif A.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Kedimi burada kısırlaştırdım. Çalışan arkadaşların ilgisi çok güzeldi çok memnun kaldım herkese öneririm. Burçin Hanıma da ayrıca teşekkür ediyorum”</blockquote>
+            <cite>Nuray Ş.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“İlk açıldığın günden beri tercih ettiğimiz bir klinik. İşini para için değil severek yapan insanların olduğunu, kedimin bir süre önce düşmeye bağlı iç kanamadan ötürü yaşadığımız süreçte kanıtladılar. Kendi evlatları gibi ilgilenip bize destek oldular.”</blockquote>
+            <cite>Mert G.</cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mekan" aria-labelledby="visit-title">
+      <div class="container visit-layout">
+        <div class="visit-photo-wrap reveal">
+          <img class="visit-photo" src="foto.jpg" alt="Manifest Veteriner Kliniği işletme fotoğrafı" loading="lazy">
+        </div>
+        <div class="visit-copy reveal">
+          <span class="eyebrow">Mekânımız</span>
+          <h2 id="visit-title">Bizi ziyaret edin.</h2>
+          <p>Acil veteriner / veteriner muayenehanesi.</p>
+          <div class="visit-address">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Sütlüce Mah. Karaağaç Cd. No:104 D:106A, 34445 Beyoğlu/İstanbul</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section location" id="iletisim" aria-labelledby="location-title">
+      <div class="container location-layout">
+        <div class="location-info reveal">
+          <span class="eyebrow">Konum ve saatler</span>
+          <h2 id="location-title">Uğrayın,<br>tanışalım.</h2>
+          <div class="info-block">
+            <h3>Çalışma saatleri</h3>
+            <table class="hours-table">
+              <tbody>
+                <tr><th scope="row">Her gün</th><td>10:00–20:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="info-block">
+            <h3>Adres</h3>
+            <p>Sütlüce Mah. Karaağaç Cd. No:104 D:106A, 34445 Beyoğlu/İstanbul</p>
+          </div>
+          <a class="button button-dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=41.0531345,28.9427972" target="_blank" rel="noopener noreferrer">
+            Yol tarifi al
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="map-frame reveal">
+          <iframe title="Manifest Veteriner Kliniği konumu" src="https://maps.google.com/maps?q=41.0531345,28.9427972&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="container final-inner">
+        <div class="reveal">
+          <h2 id="cta-title">Bizimle iletişime geçin.</h2>
+          <p>Manifest Veteriner Kliniği · Her gün 10:00–20:00</p>
+        </div>
+        <div class="final-actions reveal">
+          <a class="button button-light" href="https://wa.me/905422192252?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp'tan Randevu</a>
+          <a class="button button-outline" href="tel:+905422192252">Hemen Ara</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">Manifest Veteriner Kliniği</div>
+        <address>Sütlüce Mah. Karaağaç Cd. No:104 D:106A, 34445 Beyoğlu/İstanbul</address>
+        <a href="tel:+905422192252">+90 542 219 22 52</a>
+      </div>
+      <p class="footer-note">Bu sayfa Manifest Veteriner Kliniği için hazırlanmış örnek bir tasarımdır. Bilgiler Google işletme profilinden alınmıştır.</p>
+    </div>
+  </footer>
+
+  <nav class="mobile-actions" aria-label="Mobil hızlı işlemler">
+    <a href="tel:+905422192252">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16.4v3a2 2 0 0 1-2.2 2A18.7 18.7 0 0 1 2.6 5.2 2 2 0 0 1 4.6 3h3a2 2 0 0 1 2 1.7l.5 2.8a2 2 0 0 1-.6 1.8L8 10.8a15 15 0 0 0 5.2 5.2l1.5-1.5a2 2 0 0 1 1.8-.6l2.8.5a2 2 0 0 1 1.7 2Z"/></svg>
+      Ara
+    </a>
+    <a href="https://wa.me/905422192252?text=Merhaba%2C%20randevu%20almak%20istiyorum">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3.5 20.5l1.5-4.4a8.5 8.5 0 1 1 15.5-4.6Z"/><path d="M8.3 8.4c.4-.4.8-.3 1.1.2l.7 1.1c.2.4.1.7-.2 1l-.5.4a6.4 6.4 0 0 0 3.5 3.5l.4-.5c.3-.3.6-.4 1-.2l1.1.7c.5.3.6.7.2 1.1-.4.5-1 .9-1.7.9-2.8 0-6.9-4.1-6.9-6.9 0-.7.4-1.3.9-1.8Z"/></svg>
+      WhatsApp
+    </a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=41.0531345,28.9427972" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      Yol Tarifi
+    </a>
+  </nav>
+
+  <script>
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+    }
+  </script>
+</body>
+</html>

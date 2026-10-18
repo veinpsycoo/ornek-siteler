@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ee">
+  <meta name="description" content="Shima Güzellik Salonu, Kadıköy'de lazer epilasyon, cilt bakımı, bölgesel incelme, microblading kıl tekniği, ipek kirpik ve protez tırnak hizmetleri sunar.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shima Güzellik Salonu | Kadıköy Güzellik Salonu · Cilt Bakım">
+  <meta property="og:description" content="Shima Güzellik Salonu, Kadıköy'de müşterilerine özel bir yaklaşımla güzellik hizmetleri sunar.">
+  <title>Shima Güzellik Salonu | Kadıköy Güzellik Salonu · Cilt Bakım</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --cream: #f8f5ee;
+      --paper: #fffdf9;
+      --sand: #eee8db;
+      --ink: #252922;
+      --muted: #555a51;
+      --gold: #80642d;
+      --gold-light: #c4aa73;
+      --line: #ded7c8;
+      --shadow: 0 22px 60px rgba(47, 43, 31, .09);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font: 400 16px/1.65 "DM Sans", sans-serif;
+    }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+    img { display: block; max-width: 100%; }
+    svg { flex: none; }
+    .container { width: min(100% - 40px, 1200px); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0;
+      color: var(--gold);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 25px;
+      height: 1px;
+      background: currentColor;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 500; }
+    h1 { font-size: clamp(3.5rem, 10vw, 7.8rem); line-height: 1.04; letter-spacing: -.055em; }
+    h2 { font-size: clamp(2.6rem, 5vw, 4.4rem); line-height: 1.14; letter-spacing: -.045em; }
+    h3 { font-size: clamp(1.42rem, 2vw, 1.8rem); line-height: 1.2; }
+    .lead { color: var(--muted); font-size: clamp(1rem, 1.4vw, 1.15rem); line-height: 1.85; }
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 22px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      font-size: .9rem;
+      font-weight: 700;
+      line-height: 1.3;
+      text-align: center;
+      text-decoration: none;
+      transition: transform .25s ease, background .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button svg { width: 18px; height: 18px; }
+    .button-dark { background: var(--ink); color: #fff; }
+    .button-dark:hover { background: #3d4438; box-shadow: 0 12px 26px rgba(37, 41, 34, .18); }
+    .button-outline { border-color: var(--gold); color: var(--ink); }
+    .button-outline:hover { background: #eee7d9; }
+    .button-light { background: var(--paper); color: var(--ink); }
+    .button-light:hover { background: #f3ecdf; }
+
+    .site-header {
+      position: relative;
+      z-index: 2;
+      border-bottom: 1px solid var(--line);
+      background: rgba(248, 245, 238, .95);
+    }
+    .header-inner {
+      display: flex;
+      min-height: 88px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      font: 500 clamp(1.25rem, 2.4vw, 1.7rem)/1.25 "Playfair Display", Georgia, serif;
+      letter-spacing: -.035em;
+      text-decoration: none;
+    }
+    .header-actions { display: flex; gap: 10px; }
+    .header-actions .button { min-width: 105px; }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      min-height: 700px;
+      display: grid;
+      align-items: center;
+      padding: 95px 0 115px;
+      background:
+        radial-gradient(circle at 75% 38%, rgba(212, 192, 147, .25), transparent 31%),
+        linear-gradient(125deg, #fbf9f4 4%, #f0eadc 100%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: -14vw;
+      top: 6%;
+      width: min(68vw, 820px);
+      aspect-ratio: 1;
+      border: 1px solid rgba(128, 100, 45, .25);
+      border-radius: 50%;
+      box-shadow: 0 0 0 45px rgba(128, 100, 45, .035), 0 0 0 95px rgba(128, 100, 45, .025);
+    }
+    .hero-inner { position: relative; }
+    .hero-copy { max-width: 780px; }
+    .hero h1 { margin: 24px 0 26px; }
+    .hero h1 span { display: block; color: var(--gold); }
+    .hero .lead { max-width: 550px; margin-bottom: 30px; }
+    .rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 44px;
+      padding: 8px 15px;
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      background: rgba(255, 253, 249, .7);
+      color: var(--ink);
+      font-size: .86rem;
+      font-weight: 700;
+    }
+    .rating .star { color: var(--gold); font-size: 1.25rem; line-height: 1; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 35px; }
+    .hero-mark {
+      position: absolute;
+      right: 4%;
+      bottom: -38px;
+      width: 170px;
+      height: 170px;
+      color: rgba(128, 100, 45, .42);
+      pointer-events: none;
+    }
+    .hero-mark svg { width: 100%; height: 100%; }
+
+    section { padding: 112px 0; }
+    .section-heading { max-width: 680px; margin-bottom: 45px; }
+    .section-heading h2 { margin: 17px 0 0; }
+    .services { background: var(--paper); }
+    .service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .service-card {
+      min-height: 210px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      background: #fffefa;
+      box-shadow: 0 5px 18px rgba(47, 43, 31, .025);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .service-card:hover { transform: translateY(-5px); border-color: var(--gold-light); box-shadow: var(--shadow); }
+    .service-icon {
+      display: grid;
+      width: 54px;
+      height: 54px;
+      place-items: center;
+      margin-bottom: 24px;
+      border: 1px solid #d8c8a6;
+      border-radius: 50%;
+      color: var(--gold);
+    }
+    .service-icon svg { width: 26px; height: 26px; stroke-width: 1.5; }
+    .service-card h3 { margin-bottom: 0; }
+
+    .reviews { background: #f1ecdf; }
+    .reviews-top {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 35px;
+    }
+    .reviews-top .section-heading { margin-bottom: 0; }
+    .review-score { white-space: nowrap; color: var(--gold); font-size: .9rem; font-weight: 700; }
+    .review-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 250px;
+      padding: 30px;
+      border: 1px solid #e3dbc9;
+      background: var(--paper);
+    }
+    .review-stars { margin-bottom: 18px; color: var(--gold); font-size: 1.1rem; letter-spacing: .1em; }
+    .review-card blockquote { flex: 1; margin: 0 0 22px; line-height: 1.8; }
+    .review-card cite { color: var(--gold); font-size: .9rem; font-style: normal; font-weight: 700; }
+
+    .place { background: var(--paper); }
+    .place-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(35px, 8vw, 110px); }
+    .place-image {
+      overflow: hidden;
+      aspect-ratio: 5 / 4;
+      border-radius: 180px 180px 12px 12px;
+      background: var(--sand);
+      box-shadow: var(--shadow);
+    }
+    .place-image img { width: 100%; height: 100%; object-fit: cover; }
+    .place-copy h2 { margin: 18px 0 25px; }
+    .place-copy .lead { margin-bottom: 0; }
+
+    .visit { background: var(--cream); }
+    .visit-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 52px; align-items: start; }
+    .visit h2 { margin: 17px 0 34px; }
+    .info-label { margin: 30px 0 11px; color: var(--gold); font-size: .77rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    .hours { width: 100%; max-width: 410px; border-collapse: collapse; }
+    .hours th, .hours td { padding: 13px 0; border-bottom: 1px solid var(--line); text-align: left; font-size: 1rem; }
+    .hours th { font-weight: 600; }
+    .hours td { text-align: right; }
+    address { max-width: 440px; font-style: normal; line-height: 1.8; }
+    .directions { margin-top: 24px; }
+    .map-wrap { overflow: hidden; height: 485px; border: 1px solid var(--line); border-radius: 8px; background: var(--sand); box-shadow: var(--shadow); }
+    .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+
+    .closing {
+      padding: 82px 0;
+      background:
+        radial-gradient(circle at 94% 5%, rgba(196, 170, 115, .17), transparent 30%),
+        #252922;
+      color: #fffdf9;
+    }
+    .closing-inner { display: flex; align-items: center; justify-content: space-between; gap: 35px; }
+    .closing .eyebrow { color: #e0c997; }
+    .closing h2 { max-width: 690px; margin: 17px 0 0; }
+    .closing-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .closing .button-outline { border-color: #d7be8b; color: #fffdf9; }
+    .closing .button-outline:hover { background: rgba(255,255,255,.12); }
+
+    footer { padding: 42px 0 85px; background: #1c201b; color: #f8f5ee; }
+    .footer-main { display: flex; justify-content: space-between; gap: 30px; padding-bottom: 35px; border-bottom: 1px solid rgba(255,255,255,.16); }
+    .footer-brand { margin-bottom: 12px; font: 500 1.6rem "Playfair Display", Georgia, serif; }
+    footer address { color: #e3dfd5; }
+    footer a { color: #e3dfd5; text-decoration-color: #a88d5d; text-underline-offset: 4px; }
+    .sample-note { margin: 26px 0 0; color: #c8c4ba; font-size: .76rem; line-height: 1.6; }
+
+    .mobile-bar { display: none; }
+
+    @media (max-width: 800px) {
+      .hero { min-height: 620px; }
+      .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .place-grid, .visit-grid { grid-template-columns: 1fr; }
+      .place-image { max-width: 640px; }
+      .closing-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 600px) {
+      .container { width: min(100% - 32px, 1200px); }
+      .header-inner { min-height: 72px; }
+      .brand { max-width: 180px; }
+      .header-actions .button { min-width: 0; padding: 10px 12px; font-size: .8rem; }
+      .hero { min-height: 0; padding: 90px 0 105px; }
+      .hero::after { top: 4%; right: -65%; width: 115vw; }
+      .hero h1 { margin: 18px 0 22px; }
+      .hero-mark { right: -10px; bottom: -68px; width: 115px; height: 115px; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      section { padding: 80px 0; }
+      .section-heading { margin-bottom: 28px; }
+      .service-grid, .review-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: 0; padding: 25px; }
+      .reviews-top { align-items: flex-start; flex-direction: column; gap: 14px; }
+      .review-card { min-height: 0; padding: 26px; }
+      .place-grid { gap: 32px; }
+      .place-image { aspect-ratio: 1; border-radius: 150px 150px 10px 10px; }
+      .visit-grid { gap: 34px; }
+      .map-wrap { height: 340px; }
+      .closing { padding: 72px 0; }
+      .closing-actions { width: 100%; }
+      .closing-actions .button { width: 100%; }
+      .footer-main { flex-direction: column; }
+      footer { padding-bottom: 112px; }
+      .mobile-bar {
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 8px max(8px, env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+        border-top: 1px solid var(--line);
+        background: rgba(255, 253, 249, .97);
+        box-shadow: 0 -6px 25px rgba(37, 41, 34, .08);
+      }
+      .mobile-bar a {
+        display: flex;
+        min-height: 50px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2px;
+        color: var(--ink);
+        font-size: .72rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .mobile-bar a + a { border-left: 1px solid var(--line); }
+      .mobile-bar svg { width: 19px; height: 19px; stroke: var(--gold); }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+      .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Shima Güzellik Salonu",
+    "telephone": "+905051183758",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Osmanağa Mah. Bahariye Cad. Harunoğlu Pasajı No:7-11 Kat:2",
+      "postalCode": "34714",
+      "addressLocality": "Kadıköy",
+      "addressRegion": "İstanbul",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.9894782,
+      "longitude": 29.0289394
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "10:00",
+      "closes": "19:30"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.6,
+      "reviewCount": 193
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#ust" aria-label="Shima Güzellik Salonu, sayfa başına dön">Shima Güzellik Salonu</a>
+      <nav class="header-actions" aria-label="İletişim">
+        <a class="button button-outline" href="tel:+905051183758">Ara</a>
+        <a class="button button-dark" href="https://wa.me/905051183758?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="ust">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Güzellik Salonu · Cilt Bakım</p>
+          <h1 id="hero-title">Shima <span>Güzellik Salonu</span></h1>
+          <p class="lead">Modern teknolojiyle desteklenen uzmanlıkla, her müşterimize özel bir yaklaşım sunuyoruz.</p>
+          <div class="rating" aria-label="Google puanı 4,6; 193 yorum">
+            <span class="star" aria-hidden="true">★</span>
+            <span>4.6 · 193 Google yorumu</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-dark" href="https://wa.me/905051183758?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp'tan Randevu</a>
+            <a class="button button-outline" href="tel:+905051183758">Hemen Ara</a>
+          </div>
+        </div>
+        <div class="hero-mark" aria-hidden="true">
+          <svg viewBox="0 0 170 170" fill="none">
+            <circle cx="85" cy="85" r="72" stroke="currentColor"/>
+            <circle cx="85" cy="85" r="57" stroke="currentColor" stroke-width=".6"/>
+            <path d="M85 34v102M34 85h102M49 49l72 72m0-72-72 72" stroke="currentColor" stroke-width=".7"/>
+            <circle cx="85" cy="85" r="7" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="hizmetler" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Hizmetlerimiz</p>
+          <h2 id="services-title">Size özel bakım seçenekleri</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l2.5 10.5L29 16l-10.5 2.5L16 29l-2.5-10.5L3 16l10.5-2.5L16 3Z"/></svg></span>
+            <h3>Lazer epilasyon</h3>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28c7-4 10-10 10-16-6 0-12 3-16 10M16 28C8 23 6 17 6 10c5 1 9 4 12 9M16 28c0-7 3-13 8-18"/></svg></span>
+            <h3>Cilt bakımı</h3>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5c5 3 9 3 14 0M9 27c5-3 9-3 14 0M12 8c-3 5-3 11 0 16M20 8c3 5 3 11 0 16M16 9v14"/></svg></span>
+            <h3>Bölgesel incelme</h3>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20c6-8 16-9 22-3M7 23c6-6 14-7 19-3M10 26c5-4 10-5 15-3"/></svg></span>
+            <h3>Microblading kıl tekniği</h3>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17c7-9 19-9 26 0-7 9-19 9-26 0Z"/><path d="M7 13 5 8m6 3-1-5m6 4V5m5 6 2-5m2 8 3-5"/><circle cx="16" cy="17" r="3"/></svg></span>
+            <h3>İpek kirpik</h3>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24V12a2 2 0 0 1 4 0v5-9a2 2 0 0 1 4 0v9-6a2 2 0 0 1 4 0v7-3a2 2 0 0 1 4 0v8c0 4-3 6-7 6h-2c-3 0-5-1-7-5l-3-5a2 2 0 0 1 3-2l4 5"/></svg></span>
+            <h3>Protez tırnak</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="reviews-top reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Yorumlar</p>
+            <h2 id="reviews-title">Müşterilerimiz ne diyor</h2>
+          </div>
+          <div class="review-score">★ 4.6 · 193 Google yorumu</div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Maftuna hanıma ipek kirpik yaptırdım. Kendisi çok ilgiliydi. İstediğim kirpikleri bulmama yardımcı oldu. Eli çok hızlıydı ve işlem tam istediğim gibi oldu. Kesinlikle gelmenizi tavsiye ederim”</blockquote>
+            <cite>Sinem T.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Yıllardır kirpik yaptırıyorum ancak Maftuna Hanım ellerine sağlık kirpik 1.5 ay asla dökülmedi ve kendi kirpiğime zarar gelmedi”</blockquote>
+            <cite>Nilgül Y.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“İnstagram keşfette yaptıkları bir microblading işlemine adeta aşık olup geldim.Sımsıcak gülüşü ile Meltem hanım beni karşıladı. 2024 Ekim ayında yaptırdığım microblading işlemini sorunsuz kullandım. O kadar sağlıklı eskidi ki.Artık ailecek burdayız.”</blockquote>
+            <cite>Nazli C.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Kirpik lifting yaptırmak için geldim bugün Aybiçe hanıma çok teşekkür ederim çok ilgiliydi kendisi çok güzel bir sonuç aldım. Tam istediğim gibi oldu daha önce ipek kirpik yaptırmıştım yine çok memnun kaldım her şey için teşekkür ederim Tüm ekibe”</blockquote>
+            <cite>Aycan S.</cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="place" aria-labelledby="place-title">
+      <div class="container place-grid">
+        <div class="place-image reveal">
+          <img src="foto.jpg" alt="Shima Güzellik Salonu fotoğrafı" loading="lazy">
+        </div>
+        <div class="place-copy reveal">
+          <p class="eyebrow">Mekânımız</p>
+          <h2 id="place-title">Bizi ziyaret edin</h2>
+          <p class="lead">Shima Güzellik Salonu, 2015'te İstanbul'da kuruldu. Modern teknolojiyle desteklenen uzmanlıkla, müşterilerimize en iyi hissettiren hizmetler sunuyoruz. Müşteri memnuniyetini ve güvenini ön planda tutarak her müşterimize özel bir yaklaşım sunuyoruz.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" aria-labelledby="visit-title">
+      <div class="container visit-grid">
+        <div class="reveal">
+          <p class="eyebrow">Konum ve saatler</p>
+          <h2 id="visit-title">Kadıköy'de sizi bekliyoruz</h2>
+          <p class="info-label">Çalışma saatleri</p>
+          <table class="hours">
+            <tbody>
+              <tr><th scope="row">Pzt–Cmt</th><td>10:00–19:30</td></tr>
+              <tr><th scope="row">Paz</th><td>Kapalı</td></tr>
+            </tbody>
+          </table>
+          <p class="info-label">Adres</p>
+          <address>Osmanağa Mah. Bahariye Cad. Harunoğlu Pasajı No:7-11 Kat:2, 34714 Kadıköy/İstanbul</address>
+          <a class="button button-outline directions" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.9894782,29.0289394" target="_blank" rel="noopener noreferrer">Yol tarifi al</a>
+        </div>
+        <div class="map-wrap reveal">
+          <iframe title="Shima Güzellik Salonu konumu" src="https://maps.google.com/maps?q=40.9894782,29.0289394&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="container closing-inner">
+        <div>
+          <p class="eyebrow">İletişim</p>
+          <h2 id="closing-title">Size özel bakım için iletişime geçin.</h2>
+        </div>
+        <div class="closing-actions">
+          <a class="button button-light" href="https://wa.me/905051183758?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp'tan Randevu</a>
+          <a class="button button-outline" href="tel:+905051183758">Hemen Ara</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <div class="footer-brand">Shima Güzellik Salonu</div>
+          <a href="tel:+905051183758">+90 505 118 37 58</a>
+        </div>
+        <address>Osmanağa Mah. Bahariye Cad. Harunoğlu Pasajı No:7-11 Kat:2, 34714 Kadıköy/İstanbul</address>
+      </div>
+      <p class="sample-note">Bu sayfa Shima Güzellik Salonu için hazırlanmış örnek bir tasarımdır. Bilgiler Google işletme profilinden alınmıştır.</p>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="Hızlı iletişim">
+    <a href="tel:+905051183758">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 2a16 16 0 0 0 5.5 5.5l2-2.5 5 2v4a2 2 0 0 1-2 2C10 21 3 14 3 5a2 2 0 0 1 2-2Z"/></svg>
+      <span>Ara</span>
+    </a>
+    <a href="https://wa.me/905051183758?text=Merhaba%2C%20randevu%20almak%20istiyorum">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8.5 8.5 0 0 1-12.5 7.5L3 20l1-4.5A8.5 8.5 0 1 1 20 11.5Z"/><path d="M8.5 8.5c1 3 3 5 6 6l1.5-1.5 2 1"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=40.9894782,29.0289394" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-12a7 7 0 1 0-14 0c0 6.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <span>Yol Tarifi</span>
+    </a>
+  </nav>
+
+  <script>
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    } else {
+      document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>

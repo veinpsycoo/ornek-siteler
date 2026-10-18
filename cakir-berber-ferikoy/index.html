@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14243a">
+  <meta name="description" content="Çakır Berber, Feriköy Şişli'de erkek kuaförü hizmeti verir. Her gün 07:00–02:00 saatleri arasında açıktır.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Çakır Berber | Feriköy Erkek Kuaförü">
+  <meta property="og:description" content="Feriköy'de yıllardır tecrübeli kalfalarımızla beraber erkek kuaförü hizmeti veriyoruz.">
+  <title>Çakır Berber | Feriköy Erkek Kuaförü</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #14243a;
+      --navy-deep: #0d1a2b;
+      --cream: #f7f3e9;
+      --paper: #fffcf6;
+      --ink: #17263b;
+      --muted: #536176;
+      --line: #ded8cb;
+      --gold: #b58d58;
+      --white: #fff;
+      --radius: 22px;
+      --shadow: 0 18px 48px rgba(20, 36, 58, .10);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+    img { display: block; max-width: 100%; }
+    .container { width: min(100% - 40px, 1200px); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      margin: 0 0 20px;
+      color: #785b32;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 25px; height: 1px; background: currentColor; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { line-height: 1.12; }
+    h1, h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; }
+    h2 { font-size: clamp(2.25rem, 5vw, 4rem); letter-spacing: -.035em; }
+    .section { padding-block: clamp(76px, 10vw, 132px); }
+    .section-heading { max-width: 650px; margin-bottom: 42px; }
+    .section-heading p:last-child { color: var(--muted); margin-bottom: 0; }
+
+    .site-header {
+      position: relative;
+      z-index: 5;
+      background: var(--navy-deep);
+      color: var(--cream);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .header-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      text-decoration: none;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.35rem, 3vw, 1.7rem);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .brand span { color: #e2c699; }
+    .header-actions { display: flex; gap: 10px; }
+    .header-actions a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 19px;
+      border: 1px solid rgba(255,255,255,.38);
+      border-radius: 999px;
+      font-size: .9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s, color .2s, transform .2s;
+    }
+    .header-actions a:hover { transform: translateY(-2px); background: var(--cream); color: var(--navy); }
+    .header-actions a:last-child { background: var(--cream); color: var(--navy); border-color: var(--cream); }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 76% 37%, rgba(181,141,88,.18), transparent 30%),
+        linear-gradient(135deg, #14243a 0%, #0d1a2b 78%);
+      color: var(--cream);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: -115px;
+      top: -100px;
+      width: min(65vw, 780px);
+      height: 850px;
+      border: 1px solid rgba(226,198,153,.16);
+      border-radius: 50%;
+      transform: rotate(-23deg);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0 0 0 auto;
+      width: min(27vw, 380px);
+      opacity: .16;
+      background: repeating-linear-gradient(
+        118deg,
+        transparent 0 31px,
+        #f0ede6 32px 38px,
+        #c45f57 39px 44px,
+        #f0ede6 45px 51px,
+        #446484 52px 58px,
+        transparent 59px 90px
+      );
+      mask-image: linear-gradient(to right, transparent, black);
+    }
+    .hero-inner { position: relative; padding-block: 110px 126px; }
+    .hero-copy { max-width: 760px; }
+    .hero .eyebrow { color: #e2c699; }
+    .hero h1 {
+      margin-bottom: 25px;
+      font-size: clamp(4rem, 10vw, 8.2rem);
+      letter-spacing: -.065em;
+      line-height: .96;
+    }
+    .hero h1 span { display: block; color: #e2c699; }
+    .hero-description {
+      max-width: 570px;
+      margin-bottom: 28px;
+      color: #e0e3e7;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      line-height: 1.65;
+    }
+    .rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 15px;
+      margin-bottom: 32px;
+      border: 1px solid rgba(226,198,153,.45);
+      border-radius: 999px;
+      color: var(--cream);
+      font-size: .9rem;
+      font-weight: 600;
+    }
+    .rating .star { color: #e2c699; font-size: 1.15rem; }
+    .hero-buttons, .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 23px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+    .button:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(0,0,0,.15); }
+    .button-light { background: var(--cream); color: var(--navy-deep); }
+    .button-outline { border-color: rgba(255,255,255,.55); color: var(--cream); }
+    .button-dark { background: var(--navy); color: var(--white); }
+    .hero-hours {
+      position: absolute;
+      right: 0;
+      bottom: 36px;
+      display: flex;
+      align-items: baseline;
+      gap: 11px;
+      color: #e9d4b0;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .hero-hours strong { font-size: clamp(1.15rem, 2vw, 1.55rem); letter-spacing: 0; }
+
+    .services { background: var(--cream); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .service-card {
+      min-height: 220px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 8px 26px rgba(20,36,58,.035);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 30px;
+      border-radius: 16px;
+      background: #ede6da;
+      color: var(--navy);
+    }
+    .service-icon svg { width: 29px; height: 29px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .service-card h3 { margin-bottom: 0; font-family: "Playfair Display", Georgia, serif; font-size: 1.55rem; font-weight: 600; }
+
+    .reviews { background: var(--paper); }
+    .review-intro {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 42px;
+    }
+    .review-intro .section-heading { margin-bottom: 0; }
+    .review-score {
+      flex: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 7px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .review-score strong { color: var(--navy); font-family: "Playfair Display", Georgia, serif; font-size: 2.4rem; line-height: 1; }
+    .review-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 250px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 35px rgba(20,36,58,.045);
+    }
+    .review-stars { margin-bottom: 17px; color: #946b34; letter-spacing: .16em; font-size: 1.05rem; }
+    .review-card blockquote { margin: 0 0 25px; flex: 1; font-size: 1rem; line-height: 1.75; }
+    .review-card cite { color: var(--navy); font-style: normal; font-weight: 700; }
+
+    .place { background: var(--cream); }
+    .place-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: clamp(40px, 8vw, 105px); }
+    .place-image-wrap {
+      position: relative;
+      padding: 14px;
+      border: 1px solid #c7bda9;
+      border-radius: 30px;
+    }
+    .place-image-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 22px -16px -16px 22px;
+      z-index: 0;
+      border: 1px solid #b9a98e;
+      border-radius: 26px;
+      pointer-events: none;
+    }
+    .place-image {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      aspect-ratio: 5 / 4;
+      object-fit: cover;
+      border-radius: 19px;
+      background: #ded8cb;
+    }
+    .place-copy p:last-child { margin-bottom: 0; color: var(--muted); font-size: 1.13rem; }
+
+    .visit { background: var(--paper); }
+    .visit-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: 24px; align-items: stretch; }
+    .visit-details {
+      padding: clamp(28px, 4vw, 48px);
+      border-radius: var(--radius);
+      background: var(--navy);
+      color: var(--cream);
+    }
+    .visit-details .eyebrow { color: #e2c699; }
+    .visit-details h2 { font-size: clamp(2.15rem, 4vw, 3.35rem); }
+    .detail-block { padding-block: 22px; border-top: 1px solid rgba(255,255,255,.18); }
+    .detail-block h3 { margin-bottom: 9px; color: #d6bd94; font-size: .78rem; font-family: "DM Sans", sans-serif; letter-spacing: .15em; text-transform: uppercase; }
+    .detail-block p { margin-bottom: 0; }
+    .hours-table { width: 100%; border-collapse: collapse; }
+    .hours-table th, .hours-table td { padding: 0; text-align: left; font-size: 1rem; }
+    .hours-table th { font-weight: 500; }
+    .hours-table td { text-align: right; font-weight: 700; }
+    .visit-details .button { margin-top: 12px; }
+    .map-wrap { min-height: 470px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: #e5e4df; }
+    .map-wrap iframe { display: block; width: 100%; height: 100%; min-height: 470px; border: 0; }
+
+    .closing {
+      position: relative;
+      overflow: hidden;
+      padding-block: 85px;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(181,141,88,.18), transparent 32%),
+        var(--navy-deep);
+      color: var(--cream);
+      text-align: center;
+    }
+    .closing::before, .closing::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border: 1px solid rgba(226,198,153,.16);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .closing::before { left: -160px; bottom: -180px; }
+    .closing::after { right: -160px; top: -180px; }
+    .closing .container { position: relative; z-index: 1; }
+    .closing h2 { max-width: 700px; margin-inline: auto; }
+    .closing p { color: #d6dce4; }
+    .cta-actions { justify-content: center; margin-top: 28px; }
+
+    .site-footer { padding: 48px 0 120px; background: #0b1625; color: #d9e0e7; }
+    .footer-main { display: flex; justify-content: space-between; gap: 30px; padding-bottom: 34px; border-bottom: 1px solid rgba(255,255,255,.17); }
+    .footer-main .brand { display: inline-block; margin-bottom: 12px; color: var(--cream); }
+    .footer-main address { max-width: 370px; font-style: normal; }
+    .footer-main a:not(.brand) { color: var(--cream); }
+    .footer-note { margin: 24px 0 0; color: #aab5c2; font-size: .78rem; line-height: 1.6; }
+
+    .mobile-bar { display: none; }
+
+    @media (max-width: 800px) {
+      .hero { min-height: 650px; }
+      .hero::after { width: 35vw; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .place-grid, .visit-grid { grid-template-columns: 1fr; }
+      .place-grid { gap: 48px; }
+      .place-image-wrap { max-width: 640px; }
+      .map-wrap, .map-wrap iframe { min-height: 390px; }
+    }
+    @media (max-width: 600px) {
+      .container { width: min(100% - 36px, 1200px); }
+      .header-inner { min-height: 68px; }
+      .header-actions a { padding-inline: 13px; font-size: .82rem; }
+      .hero { min-height: auto; }
+      .hero-inner { padding-block: 96px 110px; }
+      .hero h1 { font-size: clamp(3.85rem, 16vw, 5.8rem); }
+      .hero-description { font-size: 1.05rem; }
+      .hero-hours { left: 0; right: auto; bottom: 28px; }
+      .services-grid, .review-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: 0; padding: 26px; }
+      .service-icon { margin-bottom: 23px; }
+      .review-intro { align-items: start; flex-direction: column; }
+      .review-card { min-height: 0; }
+      .footer-main { flex-direction: column; }
+      .site-footer { padding-bottom: 115px; }
+      .mobile-bar {
+        position: fixed;
+        z-index: 20;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+        background: var(--navy-deep);
+        box-shadow: 0 -8px 30px rgba(0,0,0,.2);
+      }
+      .mobile-bar a {
+        min-height: 58px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        border-radius: 9px;
+        color: var(--cream);
+        font-size: .73rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .mobile-bar a:active { background: rgba(255,255,255,.1); }
+      .mobile-bar svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    }
+    @media (max-width: 390px) {
+      .header-actions { gap: 5px; }
+      .header-actions a { padding-inline: 10px; }
+      .brand { font-size: 1.25rem; }
+      .hero-buttons .button { width: 100%; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+      .reveal.is-visible { opacity: 1; transform: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Çakır Berber",
+    "description": "Feriköy'de yıllardır tecrübeli kalfalarımızla beraber erkek kuaförü hizmeti veriyoruz.",
+    "telephone": "+905302912040",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Yayla Mah. Yay Meydanı Cd. No:20/A",
+      "postalCode": "34377",
+      "addressLocality": "Feriköy, Şişli",
+      "addressRegion": "İstanbul",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.0509118,
+      "longitude": 28.9749012
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "07:00",
+      "closes": "02:00"
+    }],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.9,
+      "reviewCount": 210
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#ust" aria-label="Çakır Berber, sayfa başı">Çakır <span>Berber</span></a>
+      <nav class="header-actions" aria-label="Hızlı iletişim">
+        <a href="tel:+905302912040">Ara</a>
+        <a href="https://wa.me/905302912040?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="ust">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Feriköy · Erkek Kuaförü</p>
+          <h1 id="hero-title">Çakır <span>Berber.</span></h1>
+          <p class="hero-description">Feriköy'de yıllardır tecrübeli kalfalarımızla beraber erkek kuaförü hizmeti veriyoruz.</p>
+          <div class="rating" aria-label="5 üzerinden 4,9 puan; 210 Google yorumu">
+            <span class="star" aria-hidden="true">★</span>
+            <span>4.9 · 210 Google yorumu</span>
+          </div>
+          <div class="hero-buttons">
+            <a class="button button-light" href="https://wa.me/905302912040?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp'tan Randevu <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="tel:+905302912040">Hemen Ara <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero-hours"><span>Her gün</span><strong>07:00–02:00</strong></div>
+      </div>
+    </section>
+
+    <section class="section services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Çakır Berber</p>
+          <h2 id="services-title">Hizmetlerimiz</h2>
+        </div>
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><circle cx="8" cy="24" r="3"/><circle cx="24" cy="24" r="3"/><path d="M10.2 21.8 25 6M21.8 21.8 7 6M17.5 14.5l7.5 7.5"/></svg>
+            </div>
+            <h3>Saç kesimi</h3>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M7 9h18M10 9l2 15h8l2-15M12 14h8M14 5h4M16 5v4"/></svg>
+            </div>
+            <h3>Tıraş</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="review-intro reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Google yorumları</p>
+            <h2 id="reviews-title">Müşterilerimiz ne diyor</h2>
+          </div>
+          <div class="review-score" aria-label="5 üzerinden 4,9 puan, 210 Google yorumu"><strong>4.9</strong><span>★<br>210 Google yorumu</span></div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Tam istediğim saç modelini yapan bir berber buldum sonunda ilgi ve alaka çok iyi müşteri memnuniyetini ön planda tutan düşünen bir iş yeri herkese tavsiye ederim”</blockquote>
+            <cite>Oğuzhan A.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“İlk defa geldim saçım çok seyrek olduğu için saçım yokmuş gibi duruyor kullandığı bir ürün sayesinde saçımın seyrek ligi gitti ellinize emeğinize sağlık”</blockquote>
+            <cite>Burak G.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Şişli feriköy bölgesinde güzel hizmet kaliteli çalışanlar ve güzel kesim için teşekkürler,ayrıca kahve ikramı da çok hoş hem traş olup hem de keyifli vakit geçirmek istiyorsanız tercih edebilirsiniz O BİR DÜNYA MARKASI ÇAKIR BERBER.”</blockquote>
+            <cite>Zuzan T.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Uzun zamandır traş olmamıştım Çakır berber sohbeti iyi hem uygun fiyatlı hem temiz bir aile işletmesi”</blockquote>
+            <cite>Faruk O.</cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section place" aria-labelledby="place-title">
+      <div class="container place-grid">
+        <div class="place-image-wrap reveal">
+          <img class="place-image" src="foto.jpg" alt="Çakır Berber işletmesinin fotoğrafı" loading="lazy">
+        </div>
+        <div class="place-copy reveal">
+          <p class="eyebrow">Feriköy'de</p>
+          <h2 id="place-title">Mekânımız</h2>
+          <p>Feriköy'de yıllardır tecrübeli kalfalarımızla beraber erkek kuaförü hizmeti veriyoruz.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section visit" aria-labelledby="visit-title">
+      <div class="container visit-grid">
+        <div class="visit-details reveal">
+          <p class="eyebrow">Bizi ziyaret edin</p>
+          <h2 id="visit-title">Yolunuz Çakır Berber'e düşsün.</h2>
+          <div class="detail-block">
+            <h3>Çalışma saatleri</h3>
+            <table class="hours-table">
+              <tbody>
+                <tr><th scope="row">Her gün</th><td>07:00–02:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="detail-block">
+            <h3>Adres</h3>
+            <p>Yayla Mah. Yay Meydanı Cd. No:20/A, 34377 Feriköy, Şişli/İstanbul</p>
+          </div>
+          <a class="button button-light" href="https://www.google.com/maps/dir/?api=1&amp;destination=41.0509118,28.9749012" target="_blank" rel="noopener noreferrer">Yol tarifi al <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="map-wrap reveal">
+          <iframe title="Çakır Berber konumu" src="https://maps.google.com/maps?q=41.0509118,28.9749012&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="container reveal">
+        <p class="eyebrow" style="color:#e2c699">Çakır Berber</p>
+        <h2 id="closing-title">Randevu için bize ulaşın.</h2>
+        <p>Her gün 07:00–02:00</p>
+        <div class="cta-actions">
+          <a class="button button-light" href="https://wa.me/905302912040?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp'tan Randevu <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="tel:+905302912040">Hemen Ara <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <a class="brand" href="#ust">Çakır <span>Berber</span></a>
+          <address>Yayla Mah. Yay Meydanı Cd. No:20/A, 34377 Feriköy, Şişli/İstanbul</address>
+        </div>
+        <div><a href="tel:+905302912040">+90 530 291 20 40</a></div>
+      </div>
+      <p class="footer-note">Bu sayfa Çakır Berber için hazırlanmış örnek bir tasarımdır. Bilgiler Google işletme profilinden alınmıştır.</p>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="Mobil hızlı erişim">
+    <a href="tel:+905302912040">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 2.5a16 16 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2C10.2 21 3 13.8 3 5a2 2 0 0 1 2-2Z"/></svg>
+      <span>Ara</span>
+    </a>
+    <a href="https://wa.me/905302912040?text=Merhaba%2C%20randevu%20almak%20istiyorum">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.3A8 8 0 1 1 20 11.5Z"/><path d="M9 9.5c.5 2 2 3.5 4 4l1.2-1.2 2 1-.3 1.8c-4 .8-7.8-3-7-7l1.8-.3 1 2L9 9.5Z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=41.0509118,28.9749012" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6 7-12a7 7 0 1 0-14 0c0 6 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <span>Yol Tarifi</span>
+    </a>
+  </nav>
+
+  <script>
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    } else {
+      document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>

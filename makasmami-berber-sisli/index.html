@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111210">
+  <meta name="description" content="Makas Mami For Men, Şişli İstanbul'da bir berber shop. Her gün 09:00–23:00 açık. Randevu için WhatsApp'tan ulaşın.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Makas Mami For Men | Şişli Berber Shop">
+  <meta property="og:description" content="Şişli'de Makas Mami For Men. Her gün 09:00–23:00 açık. Randevu için WhatsApp'tan ulaşın.">
+  <title>Makas Mami For Men | Şişli Berber Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #111210;
+      --ink-soft: #1b1c19;
+      --cream: #f3f0e8;
+      --paper: #eae6dc;
+      --gold: #c4a56d;
+      --gold-light: #e2c894;
+      --muted: #b8b7ae;
+      --line: rgba(226, 200, 148, .24);
+      --max: 1200px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--ink);
+      color: var(--cream);
+      font: 400 16px/1.6 Archivo, Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a:focus-visible { outline: 3px solid var(--gold-light); outline-offset: 4px; }
+    svg { display: block; }
+    img { display: block; max-width: 100%; }
+    .wrap { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold-light);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 26px; height: 1px; background: currentColor; }
+    .section-title {
+      margin: 18px 0 0;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: clamp(3.3rem, 8vw, 6.5rem);
+      font-weight: 400;
+      letter-spacing: .015em;
+      line-height: .95;
+    }
+    .button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      padding: 13px 23px;
+      border: 1px solid transparent;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.25;
+      text-align: center;
+      transition: transform .25s ease, background .25s ease, border-color .25s ease, color .25s ease;
+    }
+    .button:hover { transform: translateY(-3px); }
+    .button svg { width: 19px; height: 19px; flex: none; }
+    .button-gold { background: var(--gold-light); color: #171610; }
+    .button-gold:hover { background: #f0d8a9; }
+    .button-outline { border-color: var(--line); color: var(--cream); }
+    .button-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+    .site-header {
+      position: relative;
+      z-index: 3;
+      border-bottom: 1px solid var(--line);
+      background: var(--ink);
+    }
+    .header-inner {
+      display: flex;
+      min-height: 78px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .wordmark {
+      max-width: 240px;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: 29px;
+      letter-spacing: .055em;
+      line-height: .9;
+    }
+    .wordmark span { display: block; color: var(--gold-light); font: 700 16px/1 Archivo, Arial, sans-serif; letter-spacing: .26em; }
+    .header-actions { display: flex; gap: 10px; }
+    .header-actions .button { min-height: 44px; padding: 10px 19px; }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 83% 45%, rgba(196, 165, 109, .15), transparent 33%),
+        linear-gradient(135deg, #191a17 0%, #10110f 58%, #171813 100%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: .28;
+      background: repeating-linear-gradient(90deg, transparent 0, transparent 108px, rgba(226, 200, 148, .12) 109px, transparent 110px);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: min(70vw, 870px);
+      aspect-ratio: 1;
+      right: -22%;
+      top: -28%;
+      z-index: -1;
+      border: 1px solid rgba(226, 200, 148, .18);
+      border-radius: 50%;
+      box-shadow: 0 0 0 75px rgba(226, 200, 148, .025), 0 0 0 150px rgba(226, 200, 148, .025);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      display: grid;
+      min-height: 690px;
+      align-content: center;
+      padding-block: 90px 105px;
+    }
+    .hero-mark {
+      position: absolute;
+      right: 1%;
+      bottom: 70px;
+      color: rgba(226, 200, 148, .12);
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: clamp(12rem, 33vw, 32rem);
+      line-height: .7;
+      user-select: none;
+      pointer-events: none;
+    }
+    .hero-copy { position: relative; z-index: 1; max-width: 850px; }
+    .hero h1 {
+      margin: 28px 0 22px;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: clamp(5.2rem, 13vw, 11.5rem);
+      font-weight: 400;
+      letter-spacing: -.012em;
+      line-height: .78;
+    }
+    .hero h1 span { display: block; color: var(--gold-light); }
+    .hero-description {
+      max-width: 550px;
+      margin: 0;
+      color: #dedbd2;
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      line-height: 1.6;
+    }
+    .rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 25px;
+      padding: 9px 14px;
+      border: 1px solid var(--line);
+      color: var(--cream);
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .rating .star { color: var(--gold-light); font-size: 21px; line-height: 1; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .hero-edge {
+      position: absolute;
+      right: 0;
+      bottom: 32px;
+      color: var(--gold-light);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+    }
+
+    section { scroll-margin-top: 25px; }
+    .services { padding-block: 108px 120px; }
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    .section-index { color: var(--gold-light); font-size: 16px; font-weight: 700; letter-spacing: .12em; }
+    .service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .service-card {
+      position: relative;
+      min-height: 215px;
+      padding: 32px;
+      background: var(--ink-soft);
+      transition: background .3s ease;
+    }
+    .service-card:hover { background: #24251f; }
+    .service-card::after {
+      content: "↗";
+      position: absolute;
+      right: 28px;
+      bottom: 23px;
+      color: var(--gold-light);
+      font-size: 24px;
+      line-height: 1;
+    }
+    .service-card svg { width: 38px; height: 38px; color: var(--gold-light); stroke-width: 1.5; }
+    .service-card h3 { margin: 42px 35px 0 0; font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.3; }
+
+    .reviews {
+      padding-block: 105px 115px;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    .reviews .eyebrow, .reviews .section-index { color: #7b5c2b; }
+    .reviews-intro { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 35px; }
+    .reviews-score { display: flex; align-items: center; gap: 13px; white-space: nowrap; }
+    .reviews-score strong { font-family: "Bebas Neue", Impact, sans-serif; font-size: 3.7rem; font-weight: 400; line-height: 1; }
+    .reviews-score span { color: #6f501e; font-size: 16px; font-weight: 700; }
+    .review-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .review-card {
+      display: flex;
+      min-height: 260px;
+      flex-direction: column;
+      padding: 32px;
+      border: 1px solid rgba(17, 18, 16, .12);
+      background: #f8f6ef;
+      box-shadow: 0 10px 28px rgba(17, 18, 16, .035);
+    }
+    .review-stars { color: #805e28; font-size: 20px; letter-spacing: .15em; line-height: 1; }
+    .review-card blockquote { margin: 24px 0 30px; font-size: 17px; line-height: 1.7; }
+    .review-card footer { margin-top: auto; padding-top: 17px; border-top: 1px solid rgba(17, 18, 16, .13); font-size: 16px; font-weight: 700; }
+
+    .place { padding-block: 120px; }
+    .place-layout { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: clamp(35px, 7vw, 105px); }
+    .place-image {
+      position: relative;
+      margin: 0;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #20211d;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, .2);
+    }
+    .place-image img { width: 100%; height: min(520px, 65vw); min-height: 330px; border-radius: 10px; object-fit: cover; }
+    .place-copy p { max-width: 440px; margin: 27px 0 0; color: #d2d0c6; font-size: 18px; line-height: 1.75; }
+    .place-rule { display: block; width: 70px; height: 1px; margin-top: 34px; background: var(--gold-light); }
+    .place-address { margin-top: 25px; color: var(--cream); font-style: normal; font-weight: 600; }
+
+    .visit {
+      padding-block: 108px 118px;
+      border-top: 1px solid var(--line);
+      background: #171814;
+    }
+    .visit-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(35px, 6vw, 85px); margin-top: 44px; }
+    .info-panel { border-top: 1px solid var(--line); }
+    .info-row { display: grid; grid-template-columns: 118px 1fr; gap: 16px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+    .info-row dt { color: var(--gold-light); font-weight: 700; }
+    .info-row dd { margin: 0; font-weight: 600; }
+    .map-frame { overflow: hidden; min-height: 390px; border: 1px solid var(--line); border-radius: 12px; background: #24251f; }
+    .map-frame iframe { display: block; width: 100%; height: 390px; border: 0; }
+    .directions { display: inline-flex; min-height: 48px; align-items: center; gap: 10px; margin-top: 24px; color: var(--gold-light); font-weight: 700; }
+    .directions:hover { color: #f1d9ac; }
+    .directions svg { width: 19px; height: 19px; }
+
+    .closing {
+      position: relative;
+      overflow: hidden;
+      padding-block: 95px;
+      color: var(--ink);
+      background: var(--gold-light);
+    }
+    .closing::after {
+      content: "M";
+      position: absolute;
+      right: 4%;
+      bottom: -125px;
+      color: rgba(17, 18, 16, .08);
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: clamp(18rem, 42vw, 36rem);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .closing-inner { position: relative; z-index: 1; display: flex; align-items: end; justify-content: space-between; gap: 35px; }
+    .closing .eyebrow { color: #4e3918; }
+    .closing h2 { max-width: 750px; margin: 18px 0 0; font-family: "Bebas Neue", Impact, sans-serif; font-size: clamp(4rem, 9vw, 8rem); font-weight: 400; line-height: .9; }
+    .closing .button { flex: none; background: var(--ink); color: var(--cream); }
+    .closing .button:hover { background: #33342d; }
+
+    .site-footer { padding: 55px 0 28px; }
+    .footer-main { display: flex; justify-content: space-between; gap: 30px; padding-bottom: 48px; }
+    .footer-name { font-family: "Bebas Neue", Impact, sans-serif; font-size: 36px; line-height: 1; }
+    .footer-contact { display: grid; gap: 10px; max-width: 450px; font-style: normal; }
+    .footer-contact a:hover { color: var(--gold-light); }
+    .footer-note { padding-top: 21px; border-top: 1px solid var(--line); color: var(--muted); font-size: 16px; }
+
+    @media (max-width: 800px) {
+      .hero-inner { min-height: 650px; }
+      .hero-mark { right: -10%; bottom: 75px; }
+      .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .place-layout, .visit-layout { grid-template-columns: 1fr; }
+      .place-image img { height: 450px; }
+      .place-copy { max-width: 610px; }
+      .closing-inner { align-items: start; flex-direction: column; }
+    }
+    @media (max-width: 600px) {
+      body { padding-bottom: 72px; }
+      .wrap { width: min(calc(100% - 36px), var(--max)); }
+      .header-inner { min-height: 70px; }
+      .wordmark { font-size: 26px; }
+      .header-actions .button { padding-inline: 12px; font-size: 16px; }
+      .header-actions .button:first-child { display: none; }
+      .hero-inner { min-height: 680px; padding-block: 80px 100px; }
+      .hero h1 { font-size: clamp(5.1rem, 19vw, 7.7rem); }
+      .hero-mark { right: -8%; bottom: 90px; opacity: .7; }
+      .hero-edge { display: none; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .services, .reviews, .place, .visit { padding-block: 76px 82px; }
+      .section-head, .reviews-intro { align-items: start; flex-direction: column; }
+      .section-index { display: none; }
+      .service-grid, .review-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: 172px; padding: 26px; }
+      .service-card h3 { margin-top: 27px; }
+      .review-card { min-height: auto; padding: 26px; }
+      .place-image img { height: 350px; min-height: 0; }
+      .place-copy p { font-size: 17px; }
+      .visit-layout { margin-top: 32px; }
+      .info-row { grid-template-columns: 1fr; gap: 5px; }
+      .map-frame, .map-frame iframe { min-height: 330px; height: 330px; }
+      .closing { padding-block: 75px; }
+      .closing .button { width: 100%; }
+      .footer-main { flex-direction: column; }
+      .mobile-bar {
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        min-height: 72px;
+        padding-bottom: env(safe-area-inset-bottom);
+        border-top: 1px solid var(--line);
+        background: #111210;
+        box-shadow: 0 -8px 25px rgba(0, 0, 0, .25);
+      }
+      .mobile-bar a {
+        display: flex;
+        min-height: 72px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2px;
+        color: var(--cream);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.1;
+      }
+      .mobile-bar a + a { border-left: 1px solid var(--line); }
+      .mobile-bar svg { width: 21px; height: 21px; color: var(--gold-light); }
+    }
+    @media (min-width: 601px) { .mobile-bar { display: none; } }
+    @media (prefers-reduced-motion: no-preference) {
+      html.motion .reveal { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
+      html.motion .reveal.visible { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Makas Mami For Men",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Meşrutiyet Mah. Vali Konağı Cd. No:109 K:1",
+        "postalCode": "34363",
+        "addressLocality": "Şişli",
+        "addressRegion": "İstanbul",
+        "addressCountry": "TR"
+      },
+      "telephone": "+905326028557",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.052449,
+        "longitude": 28.992086
+      },
+      "openingHours": "Mo-Su 09:00-23:00",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": 242
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#ust" aria-label="Makas Mami For Men, sayfanın başına dön">MAKAS MAMI <span>FOR MEN</span></a>
+      <nav class="header-actions" aria-label="Hızlı iletişim">
+        <a class="button button-outline" href="tel:+905326028557">Ara</a>
+        <a class="button button-gold" href="https://wa.me/905326028557?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="ust">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-inner">
+        <div class="hero-mark" aria-hidden="true">M</div>
+        <div class="hero-copy">
+          <span class="eyebrow">Berber Shop · Şişli</span>
+          <h1 id="hero-title">MAKAS MAMI <span>FOR MEN.</span></h1>
+          <p class="hero-description">Randevu için WhatsApp'tan ulaşın.</p>
+          <div class="rating" aria-label="5.0 puan, 242 Google yorumu"><span class="star" aria-hidden="true">★</span> 5.0 · 242 Google yorumu</div>
+          <div class="hero-actions">
+            <a class="button button-gold" href="https://wa.me/905326028557?text=Merhaba%2C%20randevu%20almak%20istiyorum">
+              WhatsApp'tan Randevu
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+            <a class="button button-outline" href="tel:+905326028557">Hemen Ara</a>
+          </div>
+        </div>
+        <span class="hero-edge" aria-hidden="true">Makas Mami For Men</span>
+      </div>
+    </section>
+
+    <section class="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">01 / Hizmetler</span>
+            <h2 class="section-title" id="services-title">Hizmetlerimiz</h2>
+          </div>
+          <span class="section-index">MAKAS MAMI FOR MEN</span>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="10" r="4"/><circle cx="9" cy="30" r="4"/><path d="m12 13 20 20M12 27 32 7M19 20l4-4"/></svg>
+            <h3>Saç kesimi</h3>
+          </article>
+          <article class="service-card reveal">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="10" r="4"/><circle cx="9" cy="30" r="4"/><path d="m12 13 20 20M12 27 32 7M19 20l4-4"/></svg>
+            <h3>Makasla kesim</h3>
+          </article>
+          <article class="service-card reveal">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8c2-3 5-5 8-5s6 2 8 5M9 15c0 13 4 21 11 22 7-1 11-9 11-22"/><path d="M12 16c3 4 6 5 8 5s5-1 8-5M15 25l5 4 5-4"/></svg>
+            <h3>Sakal kesimi</h3>
+          </article>
+          <article class="service-card reveal">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 17c0-8 5-13 12-13s12 5 12 13M11 17c0 10 3 18 9 19 6-1 9-9 9-19"/><path d="M11 16c4-1 7-3 9-6 2 3 5 5 9 6"/></svg>
+            <h3>Çocuk saç kesimi</h3>
+          </article>
+          <article class="service-card reveal">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 20c4-5 9-7 14-7s10 2 14 7c-4 5-9 7-14 7S10 25 6 20Z"/><circle cx="20" cy="20" r="4"/><path d="M8 11c4-3 8-4 12-4s8 1 12 4"/></svg>
+            <h3>Kaş kesimi</h3>
+          </article>
+          <article class="service-card reveal">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4 6 12v16l14 8 14-8V12L20 4Z"/><path d="m6 12 14 8 14-8M20 20v16M14 8l14 8"/></svg>
+            <h3>Damat paketleri</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" aria-labelledby="reviews-title">
+      <div class="wrap">
+        <div class="reviews-intro reveal">
+          <div>
+            <span class="eyebrow">02 / Yorumlar</span>
+            <h2 class="section-title" id="reviews-title">Müşterilerimiz<br>ne diyor</h2>
+          </div>
+          <div class="reviews-score" aria-label="5.0 puan, 242 Google yorumu">
+            <strong>5.0</strong>
+            <span>★★★★★<br>242 Google yorumu</span>
+          </div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>Burada oğluma saç traşı yaptırdıktan sonra anladım ki bu iş ustalıkla yapıldığında basit bir saç kesimi olmaktan çıkıyor. Taşradan metropole geçiş köprüsü gibi, imaj değişikliği konusunda fark yaratan bi zanaatkar.</blockquote>
+            <footer>Yeliz Ö.</footer>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>Kendinizi gerçekten özel hissedeceğiniz bir yer. Mami'nin diğer berberlerin aksine tıraşı hemen bitireyim diye bir derdi yok, o kadar titiz ki iyi bir tıraş için saatler harcıyor.</blockquote>
+            <footer>Orhan G.</footer>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>Beklentilerimin üstünde bir traş hizmetiydi, konumu mükemmel ve Muhammet bey çok güzel ve en ince detayına kadar ilgiledi. Hiç tereddüt etmeden saçlarınızı kendisine emanet edebilirsiniz</blockquote>
+            <footer>Oğuzhan Ö.</footer>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>Muhammed beye uzun zamandır traşa geliyorum saç sakal çok güzel kesiyo rahatça traş olabilirsiniz</blockquote>
+            <footer>Ömer C.</footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="place" aria-labelledby="place-title">
+      <div class="wrap place-layout">
+        <figure class="place-image reveal">
+          <img src="foto.jpg" alt="Makas Mami For Men işletme fotoğrafı" loading="lazy">
+        </figure>
+        <div class="place-copy reveal">
+          <span class="eyebrow">03 / Mekânımız</span>
+          <h2 class="section-title" id="place-title">Bizi ziyaret edin</h2>
+          <p>Makas Mami For Men, Şişli'de. Randevu için WhatsApp'tan ulaşın.</p>
+          <span class="place-rule" aria-hidden="true"></span>
+          <address class="place-address">Meşrutiyet Mah. Vali Konağı Cd. No:109 K:1, 34363 Şişli/İstanbul</address>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" aria-labelledby="visit-title">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">04 / İletişim</span>
+          <h2 class="section-title" id="visit-title">Yolunuz düşsün</h2>
+        </div>
+        <div class="visit-layout">
+          <div class="reveal">
+            <dl class="info-panel">
+              <div class="info-row">
+                <dt>Çalışma saatleri</dt>
+                <dd>Her gün<br>09:00–23:00</dd>
+              </div>
+              <div class="info-row">
+                <dt>Adres</dt>
+                <dd>Meşrutiyet Mah. Vali Konağı Cd. No:109 K:1, 34363 Şişli/İstanbul</dd>
+              </div>
+              <div class="info-row">
+                <dt>Telefon</dt>
+                <dd><a href="tel:+905326028557">+90 532 602 85 57</a></dd>
+              </div>
+            </dl>
+            <a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;destination=41.052449,28.992086" target="_blank" rel="noopener noreferrer">
+              Yol tarifi al
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="map-frame reveal">
+            <iframe title="Makas Mami For Men konumu" src="https://maps.google.com/maps?q=41.052449,28.992086&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="wrap closing-inner reveal">
+        <div>
+          <span class="eyebrow">Makas Mami For Men</span>
+          <h2 id="closing-title">Randevu için<br>yazın.</h2>
+        </div>
+        <a class="button" href="https://wa.me/905326028557?text=Merhaba%2C%20randevu%20almak%20istiyorum">
+          WhatsApp'tan Randevu
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-name">MAKAS MAMI<br>FOR MEN</div>
+        <address class="footer-contact">
+          <span>Meşrutiyet Mah. Vali Konağı Cd. No:109 K:1, 34363 Şişli/İstanbul</span>
+          <a href="tel:+905326028557">+90 532 602 85 57</a>
+        </address>
+      </div>
+      <div class="footer-note">Bu sayfa Makas Mami For Men için hazırlanmış örnek bir tasarımdır. Bilgiler Google işletme profilinden alınmıştır.</div>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="Mobil hızlı bağlantılar">
+    <a href="tel:+905326028557">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.7L7.3 10a16 16 0 0 0 6.7 6.7l1.6-1.7a2 2 0 0 1 1.7-.6l3 .5a2 2 0 0 1 1.7 2Z"/></svg>
+      Ara
+    </a>
+    <a href="https://wa.me/905326028557?text=Merhaba%2C%20randevu%20almak%20istiyorum">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1-5.1a8.5 8.5 0 1 1 16.5-3.4Z"/><path d="M8.5 8.5c.6 3 2.4 4.8 5.5 6l1.5-1.5"/></svg>
+      WhatsApp
+    </a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=41.052449,28.992086" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      Yol Tarifi
+    </a>
+  </nav>
+
+  <script>
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("motion");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    }
+  </script>
+</body>
+</html>

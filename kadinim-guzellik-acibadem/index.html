@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#243b32">
+  <meta name="description" content="Kadınım Güzellik Salonu, Acıbadem Kadıköy’de 36 yıllık tecrübesiyle güvenilir ve steril bir ortamda özbakım hizmetleri sunar.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:title" content="Kadınım Güzellik Salonu | Acıbadem Güzellik Salonu">
+  <meta property="og:description" content="Acıbadem’de 36 yıllık tecrübeyle huzurlu ve keyifli bir özbakım günü.">
+  <title>Kadınım Güzellik Salonu | Acıbadem Güzellik Salonu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --forest:#243b32;
+      --forest-deep:#192d25;
+      --sage:#dce7dc;
+      --sage-light:#eff4ed;
+      --champagne:#e9d8b7;
+      --cream:#faf8f2;
+      --ink:#26332d;
+      --muted:#56655b;
+      --line:#d9e2d8;
+      --white:#fff;
+      --shadow:0 24px 70px rgba(31,54,42,.10);
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font:400 16px/1.7 Manrope,sans-serif}
+    a{color:inherit;text-decoration:none}
+    button,a{ -webkit-tap-highlight-color:transparent }
+    a:focus-visible{outline:3px solid #9b7130;outline-offset:4px}
+    img{display:block;max-width:100%}
+    .container{width:min(100% - 40px,1200px);margin-inline:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:#486454;font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+    .eyebrow::before{content:"";width:25px;height:1px;background:currentColor}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:.98}
+    h2{font-size:clamp(2.8rem,5vw,5rem);letter-spacing:-.035em}
+    .section{padding:clamp(76px,9vw,132px) 0}
+    .section-intro{max-width:650px;margin-bottom:38px}
+    .section-intro p{color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border:1px solid transparent;border-radius:999px;font-size:.9rem;font-weight:700;line-height:1.3;transition:transform .25s,background .25s,box-shadow .25s}
+    .btn:hover{transform:translateY(-3px)}
+    .btn svg{width:18px;height:18px;flex:none}
+    .btn-dark{background:var(--forest);color:#fff;box-shadow:0 10px 24px rgba(36,59,50,.16)}
+    .btn-dark:hover{background:var(--forest-deep)}
+    .btn-outline{border-color:#75907e;color:var(--forest);background:transparent}
+    .btn-outline:hover{background:#edf3eb}
+    .btn-light{background:var(--cream);color:var(--forest)}
+    .btn-light:hover{background:#fff}
+
+    .site-header{position:relative;z-index:5;background:var(--cream);border-bottom:1px solid var(--line)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:82px}
+    .brand{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.45rem,2.6vw,2rem);font-weight:600;line-height:1;color:var(--forest);letter-spacing:-.03em}
+    .header-actions{display:flex;gap:9px}
+    .header-actions .btn{min-height:44px;padding:10px 19px}
+
+    .hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#f7f6ec 0%,#ebf0e8 58%,#dce8dc 100%)}
+    .hero::before{content:"";position:absolute;inset:0;opacity:.38;background-image:radial-gradient(#748f79 .7px,transparent .7px);background-size:22px 22px;mask-image:linear-gradient(90deg,transparent 25%,#000 100%);pointer-events:none}
+    .hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(290px,.7fr);gap:6%;align-items:center;min-height:660px;padding-block:95px 105px}
+    .hero-copy{max-width:750px;z-index:1}
+    .hero h1{max-width:780px;margin:25px 0 24px;color:var(--forest);font-size:clamp(4.25rem,8.2vw,8.9rem);letter-spacing:-.068em}
+    .hero h1 em{display:block;color:#657d69;font-weight:400}
+    .hero-text{max-width:520px;margin-bottom:28px;color:#42584b;font-size:clamp(1rem,1.25vw,1.12rem)}
+    .rating{display:inline-flex;align-items:center;gap:9px;margin-bottom:32px;padding:9px 15px;border:1px solid #cbd9c8;border-radius:999px;background:rgba(255,255,255,.58);color:var(--forest);font-size:.83rem;font-weight:700}
+    .rating .star{color:#8b6627;font-size:1.05rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .heritage{position:relative;display:grid;place-items:center;min-height:455px;isolation:isolate}
+    .heritage::before,.heritage::after{content:"";position:absolute;border:1px solid rgba(52,83,62,.22);border-radius:47% 53% 52% 48% / 54% 42% 58% 46%;transform:rotate(-18deg)}
+    .heritage::before{width:min(100%,425px);aspect-ratio:1}
+    .heritage::after{width:min(84%,350px);aspect-ratio:1;transform:rotate(27deg)}
+    .heritage-core{display:flex;align-items:center;justify-content:center;flex-direction:column;width:min(72%,300px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f5f6ed,#d7e3d6 75%);box-shadow:0 25px 80px rgba(62,93,68,.13);text-align:center}
+    .heritage-number{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(6rem,10vw,10.5rem);line-height:.76;letter-spacing:-.09em;color:var(--forest)}
+    .heritage-label{margin-top:19px;color:#4a6653;font-size:.75rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase}
+    .heritage-mark{position:absolute;right:3%;bottom:7%;width:70px;height:70px;color:#718d71;transform:rotate(-18deg)}
+
+    .services{background:#fff}
+    .service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+    .service-card{min-height:180px;padding:24px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#fff,#f8faf6);transition:transform .25s,box-shadow .25s,border-color .25s}
+    .service-card:hover{transform:translateY(-5px);border-color:#a9c1ac;box-shadow:var(--shadow)}
+    .service-icon{display:grid;place-items:center;width:48px;height:48px;margin-bottom:24px;border-radius:15px;background:var(--sage-light);color:var(--forest)}
+    .service-icon svg{width:25px;height:25px;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .service-card h3{margin:0;font-size:1.7rem;line-height:1.1;color:var(--forest)}
+
+    .reviews{background:var(--sage-light)}
+    .reviews-top{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:35px}
+    .reviews-top h2{margin-bottom:0}
+    .score{flex:none;text-align:right;color:var(--forest)}
+    .score strong{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:3rem;font-weight:600;line-height:1}
+    .score span{font-size:.82rem}
+    .review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+    .review-card{display:flex;flex-direction:column;padding:clamp(25px,3vw,38px);border:1px solid #d6e2d5;border-radius:25px;background:#fff;box-shadow:0 12px 34px rgba(38,61,47,.045)}
+    .stars{color:#936b29;letter-spacing:.13em;font-size:1rem}
+    .review-card blockquote{margin:18px 0 28px;color:#34483a;font-size:1rem;line-height:1.8}
+    .review-card cite{margin-top:auto;color:var(--forest);font-size:.88rem;font-style:normal;font-weight:700}
+
+    .place{background:var(--cream)}
+    .place-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);align-items:center;gap:clamp(35px,7vw,100px)}
+    .place-image{position:relative;margin:0}
+    .place-image::before{content:"";position:absolute;z-index:0;inset:20px -18px -18px 20px;border:1px solid #9fb7a2;border-radius:30px}
+    .place-image img{position:relative;width:100%;height:clamp(350px,42vw,570px);border-radius:30px;object-fit:cover;box-shadow:var(--shadow)}
+    .place-copy h2{margin:16px 0 26px;color:var(--forest)}
+    .place-copy p{max-width:500px;color:#4b5f51;font-size:1.04rem}
+    .place-rule{width:82px;height:1px;margin:30px 0;background:#a4b9a4}
+    .place-small{font-family:"Cormorant Garamond",Georgia,serif!important;font-size:1.7rem!important;line-height:1.25!important;color:var(--forest)!important}
+
+    .visit{background:#fff}
+    .visit-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:35px;align-items:stretch}
+    .visit h2{margin:16px 0 30px}
+    .info-panel{padding:clamp(25px,3vw,40px);border:1px solid var(--line);border-radius:26px;background:var(--cream)}
+    .info-panel h3{margin:0 0 18px;font-size:2rem;color:var(--forest)}
+    .hours{width:100%;border-collapse:collapse;margin-bottom:34px}
+    .hours th,.hours td{padding:13px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-size:.95rem}
+    .hours th{font-weight:600}
+    .hours td{text-align:right;color:#4d6353}
+    address{font-style:normal;color:#4d6353}
+    .info-panel .btn{margin-top:25px}
+    .map-frame{overflow:hidden;min-height:440px;border:1px solid var(--line);border-radius:26px;background:var(--sage-light)}
+    .map-frame iframe{display:block;width:100%;height:100%;min-height:440px;border:0}
+
+    .closing{position:relative;overflow:hidden;padding:clamp(70px,8vw,115px) 0;background:var(--forest);color:#fff}
+    .closing::after{content:"";position:absolute;right:-90px;top:-130px;width:450px;height:450px;border:1px solid rgba(233,216,183,.24);border-radius:50%;box-shadow:0 0 0 55px rgba(233,216,183,.035),0 0 0 110px rgba(233,216,183,.025);pointer-events:none}
+    .closing-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .closing .eyebrow{color:var(--champagne)}
+    .closing h2{max-width:730px;margin:15px 0 0;font-size:clamp(3rem,6vw,6rem)}
+    .closing-actions{display:flex;flex-wrap:wrap;gap:11px}
+    .closing .btn-outline{border-color:#acc0ae;color:#fff}
+    .closing .btn-outline:hover{background:rgba(255,255,255,.1)}
+
+    footer{padding:40px 0 105px;background:#192d25;color:#dbe6dc}
+    .footer-main{display:flex;justify-content:space-between;gap:28px;align-items:start}
+    .footer-brand{font-family:"Cormorant Garamond",Georgia,serif;font-size:2rem;line-height:1.05;color:#fff}
+    .footer-details{display:flex;gap:35px;flex-wrap:wrap;font-size:.88rem}
+    .footer-details address{max-width:300px;color:#dbe6dc}
+    .footer-details a{text-decoration:underline;text-decoration-color:#839b87;text-underline-offset:4px}
+    .disclaimer{margin:35px 0 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);color:#b9cbbd;font-size:.75rem}
+    .mobile-bar{display:none}
+    .reveal{transition:opacity .65s ease,transform .65s ease}
+    .reveal.is-pending{opacity:0;transform:translateY(22px)}
+    .reveal.is-visible{opacity:1;transform:none}
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr;gap:12px;padding-block:76px 65px}
+      .heritage{min-height:280px;max-width:350px;width:100%;justify-self:center}
+      .heritage::before{width:280px}.heritage::after{width:235px}
+      .heritage-core{width:195px}
+      .heritage-number{font-size:7rem}
+      .heritage-mark{right:0}
+      .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .closing-inner{align-items:start;flex-direction:column}
+    }
+    @media(max-width:700px){
+      .container{width:min(100% - 32px,1200px)}
+      .header-inner{min-height:68px}
+      .header-actions{display:none}
+      .hero-inner{padding-block:66px 56px}
+      .hero h1{font-size:clamp(4rem,13vw,6rem)}
+      .hero-actions .btn{flex:1 1 180px}
+      .heritage{min-height:255px}
+      .reviews-top{align-items:start;flex-direction:column}
+      .score{text-align:left}
+      .review-grid,.place-grid,.visit-grid{grid-template-columns:1fr}
+      .place-image img{height:380px}
+      .map-frame,.map-frame iframe{min-height:340px}
+      .footer-main{flex-direction:column}
+      footer{padding-bottom:110px}
+      .mobile-bar{position:fixed;z-index:20;inset:auto 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:9px 10px calc(9px + env(safe-area-inset-bottom));border-top:1px solid #cedccc;background:rgba(250,248,242,.97);box-shadow:0 -10px 30px rgba(26,45,36,.09);backdrop-filter:blur(14px)}
+      .mobile-bar a{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;min-height:50px;border-radius:12px;color:var(--forest);font-size:.7rem;font-weight:700;line-height:1.2}
+      .mobile-bar a:hover{background:var(--sage-light)}
+      .mobile-bar svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    }
+    @media(max-width:420px){
+      .service-card{min-height:150px;padding:18px}
+      .service-card h3{font-size:1.5rem}
+      .service-icon{margin-bottom:17px}
+      .place-image img{height:310px}
+      .review-card{padding:23px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+      .reveal.is-pending{opacity:1;transform:none}
+    }
+  html,body{overflow-x:clip}</style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BeautySalon",
+    "name":"Kadınım Güzellik Salonu",
+    "telephone":"+905322242810",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Acıbadem, Ulusuluk Sk. No:43 D:B",
+      "postalCode":"34718",
+      "addressLocality":"Kadıköy",
+      "addressRegion":"İstanbul",
+      "addressCountry":"TR"
+    },
+    "geo":{
+      "@type":"GeoCoordinates",
+      "latitude":40.9975053,
+      "longitude":29.0386965
+    },
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:30","closes":"19:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"12:00","closes":"18:00"}
+    ],
+    "aggregateRating":{
+      "@type":"AggregateRating",
+      "ratingValue":4.9,
+      "reviewCount":71
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#baslangic" aria-label="Kadınım Güzellik Salonu, sayfa başı">Kadınım Güzellik Salonu</a>
+      <nav class="header-actions" aria-label="İletişim">
+        <a class="btn btn-outline" href="tel:+905322242810">Ara</a>
+        <a class="btn btn-dark" href="https://wa.me/905322242810?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="baslangic">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Acıbadem · Güzellik Salonu</span>
+          <h1 id="hero-title">Kendinizi <em>şımartın.</em></h1>
+          <p class="hero-text">36 yıllık tecrübe ile güvenilir ve steril bir ortamda huzurlu ve keyifli bir özbakım günü kendinize hediye edin.</p>
+          <div class="rating" aria-label="5 üzerinden 4,9 puan; 71 Google yorumu"><span class="star" aria-hidden="true">★</span> 4.9 · 71 Google yorumu</div>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="https://wa.me/905322242810?text=Merhaba%2C%20randevu%20almak%20istiyorum">
+              WhatsApp'tan Randevu
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-outline" href="tel:+905322242810">Hemen Ara</a>
+          </div>
+        </div>
+        <div class="heritage" aria-label="36 yıllık tecrübe">
+          <div class="heritage-core">
+            <span class="heritage-number">36</span>
+            <span class="heritage-label">Yıllık tecrübe</span>
+          </div>
+          <svg class="heritage-mark" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+            <path d="M40 72V19M40 52C20 50 14 36 15 19c17 1 25 14 25 33ZM40 42c0-17 9-29 25-34 2 19-5 31-25 34Z"/>
+            <path d="M28 68c5-4 19-4 24 0"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="hizmetler" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="eyebrow">Özbakım zamanı</span>
+          <h2 id="services-title">Hizmetlerimiz</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14M7 16c0-3 2-5 5-5s5 2 5 5v4H7v-4ZM9 11V5a3 3 0 0 1 6 0v6"/></svg></div><h3>Pedikür</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c2-5 5-8 8-8s6 3 8 8M8 9a4 4 0 0 1 8 0M12 12V4"/></svg></div><h3>Ağda</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M7 17V8m3 9V5m4 12V6m3 11V9M7 8c0-1 1-2 2-2m8 3c0-1-1-2-2-2"/></svg></div><h3>Manikür</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8l1 4v12H7V8l1-4ZM7 8h10M10 13c0 2 1 3 2 3s2-1 2-3"/></svg></div><h3>Şampuan ve saç kremi</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h10l4-3v10l-4-3H3v-4ZM17 9c2 1 3 2 3 3s-1 2-3 3M5 14l2 6h4l-2-6"/></svg></div><h3>Fön</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14c3-4 6-5 9-5s6 1 9 5M4 14c2 2 5 3 8 3s6-1 8-3M8 10 6 6m10 4 2-4"/></svg></div><h3>Kaş güzelleştirme</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 20h10M9 20V9h6v11M10 9V5h4v4M8 5h8M10 14h4"/></svg></div><h3>Kalıcı oje</h3></article>
+          <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 19 8-8m-3-3 6 6m-4-8 6 6m-5-5 3-3 4 4-3 3M4 20l3-1-2-2-1 3Z"/></svg></div><h3>Aşı</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews" id="yorumlar" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="reviews-top reveal">
+          <div>
+            <span class="eyebrow">Google yorumları</span>
+            <h2 id="reviews-title">Müşterilerimiz ne diyor</h2>
+          </div>
+          <div class="score"><strong>4.9</strong><span>71 Google yorumu</span></div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card reveal">
+            <div class="stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Her şey tertemizdi. Güzellik salonunun sahibi Sinem hanım sıcak, güler yüzlü, nazik ve bilgili bir insandı. pedikür ve manikür yaptırmaya gelmiştim. Düzenli bakım yaptırmadığım, berbat haldeki tırnaklarımdan bile tertemiz sonuç aldım.”</blockquote>
+            <cite>Hazal İ.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Çok çok iyi bir hizmet alıyorsunuz her şeyden önce Sinem hanımın güler yüzü yetiyor ben yıllardır sadece buraya geliyorum ağda için eli çok hafif ve güvenebildiğim tek yer burası hatta il dışından geliyorum güvenebildğim tek yer”</blockquote>
+            <cite>Sümeyye E.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Tırnak batması problemim nedeniyle pedikür için gittim. Yaklaşık 6 aydır düzenli olarak hizmet alıyorum. Sinem Hanım’ın eli gerçekten çok hafif ve işinde oldukça başarılı. Her işlemden memnun ayrılıyorum.”</blockquote>
+            <cite>Salim K.</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Bugun kalici oje ve pedikur icin gittim, gercekten islemlerden cok memnun kaldim. Islemden hemen sonra aletler sterilizasyon icin makineye kondu ve kullanilan malzemeler temizdi. Ayni zamanda Sinem hanim cok kibar ve tatli biri, kesinlikle tavsiye ediyorum! :)”</blockquote>
+            <cite>İpek Y.</cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section place" id="mekan" aria-labelledby="place-title">
+      <div class="container place-grid">
+        <figure class="place-image reveal">
+          <img src="foto.jpg" alt="Kadınım Güzellik Salonu mekânından bir görünüm" loading="lazy">
+        </figure>
+        <div class="place-copy reveal">
+          <span class="eyebrow">Mekânımız</span>
+          <h2 id="place-title">Kendinize ayırdığınız zaman, size ait olsun.</h2>
+          <p>Kendinizi şımartın. 36 yıllık tecrübe ile güvenilir ve steril bir ortamda huzurlu ve keyifli bir özbakım günü kendinize hediye edin.</p>
+          <div class="place-rule" aria-hidden="true"></div>
+          <p class="place-small">Acıbadem, Kadıköy</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section visit" id="ziyaret" aria-labelledby="visit-title">
+      <div class="container">
+        <span class="eyebrow reveal">Bizi ziyaret edin</span>
+        <h2 id="visit-title" class="reveal">Size yakın bir mola.</h2>
+        <div class="visit-grid">
+          <div class="info-panel reveal">
+            <h3>Çalışma saatleri</h3>
+            <table class="hours">
+              <tbody>
+                <tr><th scope="row">Pzt-Cmt</th><td>09:30–19:30</td></tr>
+                <tr><th scope="row">Paz</th><td>12:00–18:00</td></tr>
+              </tbody>
+            </table>
+            <h3>Adresimiz</h3>
+            <address>Acıbadem, Ulusuluk Sk. No:43 D:B, 34718 Kadıköy/İstanbul</address>
+            <a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.9975053,29.0386965" target="_blank" rel="noopener noreferrer">Yol tarifi al
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="map-frame reveal">
+            <iframe title="Kadınım Güzellik Salonu konumu" src="https://maps.google.com/maps?q=40.9975053,29.0386965&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="container closing-inner">
+        <div class="reveal">
+          <span class="eyebrow">Kadınım Güzellik Salonu</span>
+          <h2 id="closing-title">Kendinize bir gün ayırın.</h2>
+        </div>
+        <div class="closing-actions reveal">
+          <a class="btn btn-light" href="https://wa.me/905322242810?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp'tan Randevu</a>
+          <a class="btn btn-outline" href="tel:+905322242810">Hemen Ara</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">Kadınım Güzellik Salonu</div>
+        <div class="footer-details">
+          <address>Acıbadem, Ulusuluk Sk. No:43 D:B, 34718 Kadıköy/İstanbul</address>
+          <a href="tel:+905322242810">+90 532 224 28 10</a>
+        </div>
+      </div>
+      <p class="disclaimer">Bu sayfa Kadınım Güzellik Salonu için hazırlanmış örnek bir tasarımdır. Bilgiler Google işletme profilinden alınmıştır.</p>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="Hızlı iletişim">
+    <a href="tel:+905322242810">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h4l1 4-2 2a16 16 0 0 0 6 6l2-2 4 1v4c0 1-1 2-2 2C10 20 4 14 4 5c0-1 1-2 2-2Z"/></svg>
+      Ara
+    </a>
+    <a href="https://wa.me/905322242810?text=Merhaba%2C%20randevu%20almak%20istiyorum">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-8 8 8.5 8.5 0 0 1-3.6-.8L4 20l1.3-4.4A8 8 0 1 1 20 11.5Z"/><path d="M9 9c1 3 3 5 6 6"/></svg>
+      WhatsApp
+    </a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=40.9975053,29.0386965" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      Yol Tarifi
+    </a>
+  </nav>
+
+  <script>
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const items = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("is-pending");
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      items.forEach((item) => {
+        item.classList.add("is-pending");
+        observer.observe(item);
+      });
+    }
+  </script>
+</body>
+</html>

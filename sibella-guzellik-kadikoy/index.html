@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5b2035">
+  <title>Sibel'la Ağda ve Güzellik Salonu | Kadıköy Kuaför / Güzellik Salonu</title>
+  <meta name="description" content="Sibel'la Ağda ve Güzellik Salonu, Kadıköy'de manikür, pedikür, kaş ağda, kalıcı oje, keratin bakımı, fön ve ağda hizmetleri sunar.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:title" content="Sibel'la Ağda ve Güzellik Salonu | Kadıköy">
+  <meta property="og:description" content="Kadıköy'de manikür, pedikür, kaş ağda, kalıcı oje, keratin bakımı, fön ve ağda hizmetleri.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --wine: #5b2035;
+      --wine-dark: #411728;
+      --ink: #33252a;
+      --muted: #67575c;
+      --powder: #f8eeed;
+      --blush: #eedcdb;
+      --cream: #fffaf6;
+      --line: #ddc9c8;
+      --shadow: 0 20px 50px rgba(91, 32, 53, .09);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font: 400 16px/1.65 "DM Sans", sans-serif;
+    }
+    a { color: inherit; }
+    svg { display: block; }
+    .container { width: min(100% - 40px, 1200px); margin-inline: auto; }
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--wine);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; line-height: 1.05; }
+    h2 { margin-bottom: 20px; font-size: clamp(2.8rem, 5vw, 4.7rem); font-weight: 600; }
+    h3 { font-size: 1.75rem; font-weight: 600; }
+    .section { padding-block: clamp(76px, 9vw, 130px); }
+    .section-intro { max-width: 650px; color: var(--muted); }
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 22px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-size: .9rem;
+      font-weight: 700;
+      line-height: 1.25;
+      text-align: center;
+      text-decoration: none;
+      transition: background .2s, color .2s, border-color .2s, transform .2s, box-shadow .2s;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button:focus-visible, a:focus-visible { outline: 3px solid #ae6379; outline-offset: 3px; }
+    .button-primary { background: var(--wine); color: #fff; box-shadow: 0 10px 24px rgba(91, 32, 53, .18); }
+    .button-primary:hover { background: var(--wine-dark); }
+    .button-outline { border-color: var(--wine); color: var(--wine); }
+    .button-outline:hover { background: var(--wine); color: #fff; }
+    .button-light { background: #fffaf6; color: var(--wine); }
+    .button-light:hover { background: #f3e4e3; }
+    .button-light-outline { border-color: rgba(255,255,255,.75); color: #fff; }
+    .button-light-outline:hover { background: #fff; color: var(--wine); }
+
+    .site-header {
+      position: relative;
+      z-index: 5;
+      border-bottom: 1px solid rgba(91, 32, 53, .1);
+      background: var(--cream);
+    }
+    .header-inner {
+      display: flex;
+      min-height: 84px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      color: var(--wine);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.5rem, 2.6vw, 2rem);
+      font-weight: 700;
+      line-height: 1;
+      text-decoration: none;
+    }
+    .header-actions { display: flex; gap: 10px; flex-shrink: 0; }
+    .header-actions .button { min-height: 44px; padding-inline: 19px; }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 83% 50%, rgba(221, 179, 183, .44), transparent 30%),
+        linear-gradient(130deg, #fffaf6 12%, #f6e9e8 76%, #f0dbdc);
+    }
+    .hero::after {
+      position: absolute;
+      z-index: -1;
+      right: -180px;
+      bottom: -340px;
+      width: 780px;
+      height: 780px;
+      border: 1px solid rgba(91, 32, 53, .13);
+      border-radius: 50%;
+      content: "";
+    }
+    .hero-inner {
+      display: grid;
+      min-height: 690px;
+      grid-template-columns: minmax(0, 1.1fr) minmax(290px, .9fr);
+      align-items: center;
+      gap: 5%;
+      padding-block: 85px 100px;
+    }
+    .hero-copy { position: relative; z-index: 1; max-width: 710px; }
+    .hero h1 {
+      margin-bottom: 28px;
+      color: var(--wine);
+      font-size: clamp(4rem, 8vw, 8.2rem);
+      font-weight: 500;
+      letter-spacing: -.045em;
+      line-height: .88;
+    }
+    .hero h1 em { display: block; font-weight: 400; }
+    .hero-lead { max-width: 610px; margin-bottom: 25px; color: #57444a; font-size: clamp(1rem, 1.5vw, 1.16rem); }
+    .rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 30px;
+      padding: 9px 16px;
+      border: 1px solid rgba(91, 32, 53, .16);
+      border-radius: 999px;
+      background: rgba(255, 250, 246, .7);
+      color: var(--wine);
+      font-size: .9rem;
+      font-weight: 700;
+    }
+    .rating .star { font-size: 1.2rem; line-height: 1; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-art { position: relative; display: grid; min-height: 480px; place-items: center; }
+    .art-ring {
+      position: absolute;
+      width: min(100%, 490px);
+      aspect-ratio: 1;
+      border: 1px solid rgba(91, 32, 53, .22);
+      border-radius: 50%;
+    }
+    .art-ring::before, .art-ring::after {
+      position: absolute;
+      inset: 11%;
+      border: 1px solid rgba(91, 32, 53, .15);
+      border-radius: 50%;
+      content: "";
+    }
+    .art-ring::after { inset: 23%; }
+    .art-flower { width: min(94%, 450px); color: #a56879; opacity: .68; transform: rotate(-8deg); }
+    .art-label {
+      position: absolute;
+      right: 1%;
+      bottom: 8%;
+      padding: 17px 22px;
+      border: 1px solid rgba(91, 32, 53, .15);
+      border-radius: 80px;
+      background: rgba(255, 250, 246, .9);
+      color: var(--wine);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.6rem;
+      font-style: italic;
+      box-shadow: var(--shadow);
+    }
+
+    .services { background: #fffdfb; }
+    .services-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 42px; }
+    .services-heading .section-intro { max-width: 310px; margin-bottom: 8px; }
+    .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .service-card {
+      min-height: 188px;
+      padding: 28px;
+      border: 1px solid #eadbd8;
+      border-radius: 22px;
+      background: var(--cream);
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+    }
+    .service-card:hover { transform: translateY(-4px); border-color: #d1a6ad; box-shadow: var(--shadow); }
+    .service-icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 30px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--powder);
+      color: var(--wine);
+    }
+    .service-icon svg { width: 25px; height: 25px; stroke: currentColor; stroke-width: 1.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .service-card h3 { margin: 0; color: var(--wine); }
+
+    .reviews { background: var(--powder); }
+    .reviews-top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 38px; }
+    .reviews-top h2 { margin: 0; }
+    .reviews-score { color: var(--wine); font-weight: 700; }
+    .review-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .review-card {
+      display: flex;
+      min-height: 290px;
+      flex-direction: column;
+      padding: 29px;
+      border: 1px solid #eadcda;
+      border-radius: 22px;
+      background: #fffdfb;
+      box-shadow: 0 14px 34px rgba(91, 32, 53, .05);
+    }
+    .review-stars { margin-bottom: 20px; color: var(--wine); letter-spacing: .12em; }
+    .review-card blockquote { margin: 0 0 24px; flex: 1; line-height: 1.7; }
+    .review-card cite { color: var(--wine); font-size: .9rem; font-style: normal; font-weight: 700; }
+
+    .venue { background: #fffdfb; }
+    .venue-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(38px, 7vw, 100px); }
+    .venue-photo {
+      display: block;
+      width: 100%;
+      aspect-ratio: 5 / 4;
+      border-radius: 30px 130px 30px 30px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+    .venue-copy { max-width: 470px; }
+    .venue-copy p:not(.eyebrow) { color: var(--muted); font-size: 1.06rem; }
+
+    .visit { background: #f7eeeb; }
+    .visit-header { max-width: 650px; margin-bottom: 38px; }
+    .visit-grid { display: grid; grid-template-columns: minmax(300px, .8fr) minmax(0, 1.2fr); gap: 24px; }
+    .visit-panel, .map-panel { overflow: hidden; border: 1px solid #e5d2d0; border-radius: 24px; background: #fffdfb; }
+    .visit-panel { padding: clamp(25px, 3.5vw, 42px); }
+    .visit-panel h3 { margin-bottom: 18px; color: var(--wine); }
+    .hours { width: 100%; margin-bottom: 32px; border-collapse: collapse; }
+    .hours th, .hours td { padding: 13px 0; border-bottom: 1px solid #eadbd8; font-size: .95rem; }
+    .hours th { text-align: left; font-weight: 600; }
+    .hours td { text-align: right; white-space: nowrap; }
+    .address-label { margin-bottom: 8px; color: var(--wine); font-weight: 700; }
+    address { margin-bottom: 24px; color: var(--muted); font-style: normal; }
+    .map-panel iframe { display: block; width: 100%; min-height: 440px; height: 100%; border: 0; }
+
+    .final-cta {
+      position: relative;
+      overflow: hidden;
+      padding-block: 90px;
+      background: var(--wine);
+      color: #fff;
+    }
+    .final-cta::after {
+      position: absolute;
+      right: -110px;
+      top: -190px;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(255,255,255,.17);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+    .final-cta-inner { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 34px; }
+    .final-cta .eyebrow { color: #f3d8dd; }
+    .final-cta h2 { max-width: 700px; margin: 0; }
+    .final-actions { display: flex; flex-wrap: wrap; gap: 11px; }
+
+    footer { padding: 45px 0 25px; background: #351923; color: #f9eeee; }
+    .footer-main { display: grid; grid-template-columns: 1.1fr 1fr auto; gap: 28px; padding-bottom: 38px; }
+    .footer-brand { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.9rem; font-weight: 600; line-height: 1.1; }
+    .footer-main p { margin: 0; color: #efdddd; }
+    .footer-main a { color: #fff; text-decoration-color: #b894a0; text-underline-offset: 4px; }
+    .sample-note {
+      margin: 0;
+      padding-top: 19px;
+      border-top: 1px solid rgba(255,255,255,.16);
+      color: #dcc5cc;
+      font-size: .75rem;
+    }
+    .mobile-bar { display: none; }
+
+    @media (max-width: 1000px) {
+      .service-grid, .review-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-inner { grid-template-columns: 1.15fr .85fr; }
+      .hero-art { min-height: 360px; }
+      .art-label { right: 0; bottom: 2%; }
+    }
+    @media (max-width: 720px) {
+      .container { width: min(100% - 32px, 1200px); }
+      .header-inner { min-height: 70px; }
+      .brand { max-width: 220px; line-height: .95; }
+      .header-actions { display: none; }
+      .hero-inner { display: block; min-height: 0; padding-block: 85px 105px; }
+      .hero h1 { max-width: 600px; font-size: clamp(4rem, 16vw, 6rem); }
+      .hero-art { position: absolute; top: -75px; right: -135px; width: 320px; min-height: 320px; opacity: .3; pointer-events: none; }
+      .art-label { display: none; }
+      .hero-copy { position: relative; z-index: 2; }
+      .services-heading, .reviews-top { display: block; }
+      .service-grid, .review-grid { grid-template-columns: repeat(2, 1fr); }
+      .venue-grid, .visit-grid { grid-template-columns: 1fr; }
+      .venue-copy { max-width: 650px; }
+      .map-panel iframe { min-height: 350px; }
+      .final-cta-inner { display: block; }
+      .final-cta h2 { margin-bottom: 28px; }
+      .footer-main { grid-template-columns: 1fr; }
+      footer { padding-bottom: 105px; }
+      .mobile-bar {
+        position: fixed;
+        z-index: 20;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 8px 10px max(8px, env(safe-area-inset-bottom));
+        border-top: 1px solid #e5d2d0;
+        background: rgba(255, 250, 246, .97);
+        box-shadow: 0 -10px 30px rgba(51, 37, 42, .08);
+      }
+      .mobile-bar a {
+        display: flex;
+        min-height: 48px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        border-radius: 10px;
+        color: var(--wine);
+        font-size: .72rem;
+        font-weight: 700;
+        line-height: 1.1;
+        text-decoration: none;
+      }
+      .mobile-bar a:hover { background: var(--powder); }
+      .mobile-bar svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    }
+    @media (max-width: 480px) {
+      .hero-actions, .final-actions { display: grid; }
+      .service-grid, .review-grid { grid-template-columns: 1fr; }
+      .service-card { display: flex; min-height: 104px; align-items: center; gap: 20px; padding: 20px; }
+      .service-icon { flex: 0 0 48px; margin: 0; }
+      .review-card { min-height: 0; }
+      .venue-photo { aspect-ratio: 4 / 3; border-top-right-radius: 90px; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+      .reveal.is-visible { opacity: 1; transform: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Sibel'la Ağda ve Güzellik Salonu",
+    "telephone": "+905302487680",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rasimpaşa Mah. Halitağa Cad. Bahçe Katı No:72",
+      "postalCode": "34714",
+      "addressLocality": "Kadıköy",
+      "addressRegion": "İstanbul"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.9937658,
+      "longitude": 29.0313133
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "10:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "12:00",
+        "closes": "21:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": 780
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#ust" aria-label="Sibel'la Ağda ve Güzellik Salonu, sayfa başı">Sibel’la</a>
+      <nav class="header-actions" aria-label="İletişim">
+        <a class="button button-outline" href="tel:+905302487680">Ara</a>
+        <a class="button button-primary" href="https://wa.me/905302487680?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="ust">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Kuaför / Güzellik Salonu · Kadıköy</p>
+          <h1 id="hero-title">Sibel’la’da <em>güzelliğe zaman ayırın.</em></h1>
+          <p class="hero-lead">Deneyimimiz ile müşterilerimizin ihtiyaçlarına göre kişiselleştirilmiş hizmetler sunarak, ellerinizden ayak tırnaklarınıza kadar tüm güzellik ihtiyaçlarınızı karşılıyoruz.</p>
+          <div class="rating" aria-label="5.0 puan, 780 Google yorumu"><span class="star" aria-hidden="true">★</span> 5.0 · 780 Google yorumu</div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://wa.me/905302487680?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp’tan Randevu</a>
+            <a class="button button-outline" href="tel:+905302487680">Hemen Ara</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-ring"></div>
+          <svg class="art-flower" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-width="1.4">
+              <ellipse cx="250" cy="178" rx="63" ry="142"/>
+              <ellipse cx="250" cy="322" rx="63" ry="142"/>
+              <ellipse cx="178" cy="250" rx="142" ry="63"/>
+              <ellipse cx="322" cy="250" rx="142" ry="63"/>
+              <ellipse cx="199" cy="199" rx="63" ry="142" transform="rotate(-45 199 199)"/>
+              <ellipse cx="301" cy="301" rx="63" ry="142" transform="rotate(-45 301 301)"/>
+              <ellipse cx="301" cy="199" rx="63" ry="142" transform="rotate(45 301 199)"/>
+              <ellipse cx="199" cy="301" rx="63" ry="142" transform="rotate(45 199 301)"/>
+              <circle cx="250" cy="250" r="34"/>
+            </g>
+          </svg>
+          <span class="art-label">Sibel’la</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="hizmetler" aria-labelledby="services-title">
+      <div class="container">
+        <div class="services-heading reveal">
+          <div>
+            <p class="eyebrow">Özenle sunulan hizmetler</p>
+            <h2 id="services-title">Hizmetlerimiz</h2>
+          </div>
+          <p class="section-intro">Güzellik ihtiyaçlarınıza göre kişiselleştirilmiş hizmetler.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 19c-2-2-2-5-1-7l2-6c.3-1 1.8-1 2 0l-.2 4 1.8-6c.3-1 1.8-.9 2 .2l-.8 6 2.2-5c.5-.9 1.8-.5 1.8.5l-1.4 5 1.6-2c.7-.8 2-.2 1.7.8l-2 6c-.6 2-2 3.5-4 4.5H7Z"/></svg></span><h3>Manikür</h3></article>
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 18c-1.5-2-1.4-5 0-7l3-5c.5-.9 1.8-.5 1.8.5l-.4 3 1.5-3c.5-.9 1.8-.5 1.8.5l-.8 3 1.8-2c.7-.7 1.8 0 1.5.9l-2 5.1c-.8 2-2.3 3.4-4 4.5H8Z"/><path d="M6 20c3 1 7 1 10-1"/></svg></span><h3>Pedikür</h3></article>
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 15c2.5-4 5.5-5.5 9-5.5s6.5 1.5 9 5.5"/><path d="M5 9c2-2 4.3-3 7-3s5 1 7 3"/><path d="M8 17h8"/></svg></span><h3>Kaş ağda</h3></article>
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4h8v3l-1 2v10H9V9L8 7V4Z"/><path d="M9 12h6M10 4V2h4v2"/></svg></span><h3>Kalıcı oje</h3></article>
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4c-2 4 1 6 0 10-.5 2-1 4-2 6M12 4c-2 4 1 6 0 10-.5 2-1 4-2 6M17 4c-2 4 1 6 0 10-.5 2-1 4-2 6"/><path d="M4 3h15"/></svg></span><h3>Keratin bakımı</h3></article>
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9h9l3 3-3 3H4V9Z"/><path d="M16 12h4M6 9V6h6M6 15v3h6"/><path d="M20 8v8"/></svg></span><h3>Fön</h3></article>
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11Z"/><path d="M9 15a3 3 0 0 0 3 3"/></svg></span><h3>Ağda</h3></article>
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7c5 1 8 4 9 10M21 7c-5 1-8 4-9 10"/><path d="M5 6c4 0 6 2 7 4 1-2 3-4 7-4"/><path d="M12 17v3"/></svg></span><h3>İple kaş alımı</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews" id="yorumlar" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="reviews-top reveal">
+          <div>
+            <p class="eyebrow">Google yorumlarından</p>
+            <h2 id="reviews-title">Müşterilerimiz ne diyor</h2>
+          </div>
+          <div class="reviews-score">★ 5.0 · 780 Google yorumu</div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Sibel Hanım'a yıllardır manikür, pedikür ve ağda işlemleri için gidiyorum. Kendisi hem işinde çok başarılı hem de son derece titiz, özenli ve güler yüzlü.”</blockquote>
+            <cite>Gül Aygen</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Kaş bıyık işlemi için gittim ve sonuçtan inanılmaz memnun kaldım… Her şey çok özenli ve profesyoneldi.”</blockquote>
+            <cite>Esma Özgüç</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“Sibel abla çok sıcak kanlı biri beni güleryüzle ve güzel türk kahvesiyle karşıladı… eli çok hafif ve hızlı”</blockquote>
+            <cite>m akç</cite>
+          </article>
+          <article class="review-card reveal">
+            <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+            <blockquote>“ortam müthiş temizdi”</blockquote>
+            <cite>Bersu</cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section venue" id="mekan" aria-labelledby="venue-title">
+      <div class="container venue-grid">
+        <img class="venue-photo reveal" src="foto.jpg" alt="Sibel'la Ağda ve Güzellik Salonu mekân fotoğrafı" loading="lazy">
+        <div class="venue-copy reveal">
+          <p class="eyebrow">Mekânımız</p>
+          <h2 id="venue-title">Bizi ziyaret edin</h2>
+          <p>Manikür, pedikür, kaş ağda, kalıcı oje, keratin bakımı, fön ve diğer güzellik ihtiyaçlarınız için Kadıköy’deyiz.</p>
+          <a class="button button-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.9937658,29.0313133">Yol tarifi al</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section visit" id="iletisim" aria-labelledby="visit-title">
+      <div class="container">
+        <div class="visit-header reveal">
+          <p class="eyebrow">Adres ve saatler</p>
+          <h2 id="visit-title">Sizi bekliyoruz</h2>
+        </div>
+        <div class="visit-grid">
+          <div class="visit-panel reveal">
+            <h3>Çalışma saatleri</h3>
+            <table class="hours">
+              <tbody>
+                <tr><th scope="row">Pzt–Cmt</th><td>10:00–21:00</td></tr>
+                <tr><th scope="row">Paz</th><td>12:00–21:00</td></tr>
+              </tbody>
+            </table>
+            <p class="address-label">Adres</p>
+            <address>Rasimpaşa Mah. Halitağa Cad. Bahçe Katı No:72, 34714 Kadıköy/İstanbul</address>
+            <a class="button button-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.9937658,29.0313133">Yol tarifi al</a>
+          </div>
+          <div class="map-panel reveal">
+            <iframe title="Sibel'la Ağda ve Güzellik Salonu konumu" src="https://maps.google.com/maps?q=40.9937658,29.0313133&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="container final-cta-inner">
+        <div>
+          <p class="eyebrow">İletişime geçin</p>
+          <h2 id="cta-title">Güzelliğinize zaman ayırmak için bize ulaşın.</h2>
+        </div>
+        <div class="final-actions">
+          <a class="button button-light" href="https://wa.me/905302487680?text=Merhaba%2C%20randevu%20almak%20istiyorum">WhatsApp’tan Randevu</a>
+          <a class="button button-light-outline" href="tel:+905302487680">Hemen Ara</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">Sibel'la Ağda ve Güzellik Salonu</div>
+        <p>Rasimpaşa Mah. Halitağa Cad. Bahçe Katı No:72, 34714 Kadıköy/İstanbul</p>
+        <a href="tel:+905302487680">+90 530 248 76 80</a>
+      </div>
+      <p class="sample-note">Bu sayfa Sibel'la Ağda ve Güzellik Salonu için hazırlanmış örnek bir tasarımdır. Bilgiler Google işletme profilinden alınmıştır.</p>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="Hızlı iletişim">
+    <a href="tel:+905302487680">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l1 5-2 2a15 15 0 0 0 6 6l2-2 5 1v4a2 2 0 0 1-2 2C10 21 3 14 3 5a2 2 0 0 1 2-2Z"/></svg>
+      <span>Ara</span>
+    </a>
+    <a href="https://wa.me/905302487680?text=Merhaba%2C%20randevu%20almak%20istiyorum">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-8 8 8.2 8.2 0 0 1-3.5-.8L4 20l1.3-4.4A8 8 0 1 1 20 11.5Z"/><path d="M9 9c.5 2 2 3.5 4 4l1.5-1 2 1.5c-.5 1.5-1.8 2-3.2 1.6A8 8 0 0 1 8 9.8C7.6 8.4 8.1 7.1 9.6 6.6L11 8.5 9 9Z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=40.9937658,29.0313133">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <span>Yol Tarifi</span>
+    </a>
+  </nav>
+
+  <script>
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    }
+  </script>
+</body>
+</html>
